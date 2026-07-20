@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | Inner Awakening</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#527cd1;
+    --blue-dark:#2f4e9c;
+    --ink:#1c2338;
+    --ink-soft:rgba(28,35,56,.6);
+    --line:rgba(28,35,56,.12);
+    --bg:#f5f7fc;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:'Instrument Sans',sans-serif;
+    background:var(--bg);
+    display:flex;align-items:center;justify-content:center;
+    padding:20px;
+    color:var(--ink);
+  }
+  .card{
+    width:100%;max-width:400px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:36px 32px;
+    box-shadow:0 20px 50px rgba(28,35,56,.08);
+  }
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+  .brand-dot{width:10px;height:10px;border-radius:50%;background:var(--blue);}
+  .brand span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1.5rem;font-weight:700;
+    margin-bottom:6px;
+  }
+  .sub{font-size:.85rem;color:var(--ink-soft);margin-bottom:28px;line-height:1.5;}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-size:.68rem;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;
+  }
+  .field input{
+    width:100%;font-family:'Instrument Sans',sans-serif;font-size:.95rem;
+    padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;
+    outline:none;transition:.2s;
+  }
+  .field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(82,124,209,.15);}
+  .btn{
+    width:100%;background:var(--blue);color:#fff;border:none;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.9rem;
+    letter-spacing:.04em;text-transform:uppercase;
+    padding:14px;border-radius:8px;cursor:pointer;margin-top:6px;
+    transition:.2s;
+  }
+  .btn:hover{background:var(--blue-dark);}
+  .btn:disabled{opacity:.6;cursor:not-allowed;}
+  .msg{
+    font-size:.8rem;margin-top:14px;padding:10px 12px;border-radius:6px;
+    display:none;line-height:1.5;
+  }
+  .msg.error{display:block;background:#fdeaea;color:#b3261e;}
+  .msg.info{display:block;background:#eaf1fd;color:var(--blue-dark);}
+  .footer-note{margin-top:22px;font-size:.72rem;color:var(--ink-soft);text-align:center;line-height:1.6;}
+  .loading{font-size:.85rem;color:var(--ink-soft);text-align:center;padding:20px 0;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="brand"><div class="brand-dot"></div><span>Inner Awakening &middot; Admin</span></div>
+
+  <div id="loadingView" class="loading">Loading&hellip;</div>
+
+  <div id="setupView" style="display:none;">
+    <h1>Set up your admin password</h1>
+    <p class="sub">No password is set yet. Choose one now — you'll use it every time you come back to edit the site.</p>
+    <form id="setupForm">
+      <div class="field">
+        <label for="newPass">New Password</label>
+        <input type="password" id="newPass" placeholder="At least 6 characters" required minlength="6">
+      </div>
+      <div class="field">
+        <label for="confirmPass">Confirm Password</label>
+        <input type="password" id="confirmPass" placeholder="Re-enter password" required minlength="6">
+      </div>
+      <button class="btn" type="submit" id="setupBtn">Set Password &amp; Continue</button>
+      <div class="msg" id="setupMsg"></div>
+    </form>
+  </div>
+
+  <div id="loginView" style="display:none;">
+    <h1>Admin Login</h1>
+    <p class="sub">Enter your password to edit the event date, time, duration and language shown on the site.</p>
+    <form id="loginForm">
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+      <button class="btn" type="submit" id="loginBtn">Log In</button>
+      <div class="msg" id="loginMsg"></div>
+    </form>
+  </div>
+
+  <div class="footer-note">Keep your password private. This panel controls what every visitor sees on the live site.</div>
+</div>
+
+<script>
+/*
+  CONFIGURE THIS: point at your deployed backend's URL.
+  Example once deployed: 'https://inner-awakening-admin.onrender.com'
+  Leave no trailing slash.
+*/
+const API_BASE = 'https://YOUR-BACKEND-URL.example.com';
+
+const TOKEN_KEY = 'ia_admin_token';
+
+const loadingView = document.getElementById('loadingView');
+const setupView = document.getElementById('setupView');
+const loginView = document.getElementById('loginView');
+
+// if already logged in this session, skip straight to the panel
+if (sessionStorage.getItem(TOKEN_KEY)) {
+  window.location.href = 'admin-panel.html';
+}
+
+async function init() {
+  try {
+    const res = await fetch(`${API_BASE}/api/auth/status`);
+    const data = await res.json();
+    loadingView.style.display = 'none';
+    if (data.hasPassword) {
+      loginView.style.display = 'block';
+    } else {
+      setupView.style.display = 'block';
+    }
+  } catch (err) {
+    loadingView.innerHTML = 'Could not reach the admin server. Check that API_BASE in this page is set to your backend\'s live URL, and that the backend is running.';
+  }
+}
+init();
+
+document.getElementById('setupForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const p1 = document.getElementById('newPass').value;
+  const p2 = document.getElementById('confirmPass').value;
+  const msg = document.getElementById('setupMsg');
+  const btn = document.getElementById('setupBtn');
+  if (p1 !== p2) {
+    msg.textContent = "Passwords don't match. Try again.";
+    msg.className = 'msg error';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = 'Setting up...';
+  try {
+    const res = await fetch(`${API_BASE}/api/auth/set-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: p1 }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+    sessionStorage.setItem(TOKEN_KEY, data.token);
+    msg.textContent = 'Password set. Redirecting to your admin panel...';
+    msg.className = 'msg info';
+    setTimeout(() => { window.location.href = 'admin-panel.html'; }, 700);
+  } catch (err) {
+    msg.textContent = err.message;
+    msg.className = 'msg error';
+    btn.disabled = false;
+    btn.textContent = 'Set Password & Continue';
+  }
+});
+
+document.getElementById('loginForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const p = document.getElementById('password').value;
+  const msg = document.getElementById('loginMsg');
+  const btn = document.getElementById('loginBtn');
+  btn.disabled = true;
+  btn.textContent = 'Logging in...';
+  try {
+    const res = await fetch(`${API_BASE}/api/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: p }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Login failed.');
+    sessionStorage.setItem(TOKEN_KEY, data.token);
+    window.location.href = 'admin-panel.html';
+  } catch (err) {
+    msg.textContent = err.message;
+    msg.className = 'msg error';
+    btn.disabled = false;
+    btn.textContent = 'Log In';
+  }
+});
+</script>
+
+</body>
+</html>

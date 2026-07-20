@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | Inner Awakening</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#527cd1;
+    --blue-dark:#2f4e9c;
+    --ink:#1c2338;
+    --ink-soft:rgba(28,35,56,.6);
+    --line:rgba(28,35,56,.12);
+    --bg:#f5f7fc;
+    --green:#1a7f4e;
+    --red:#b3261e;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Instrument Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+  }
+  header{
+    background:#fff;border-bottom:1px solid var(--line);
+    padding:18px clamp(16px,4vw,40px);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-dot{width:10px;height:10px;border-radius:50%;background:var(--blue);}
+  .brand span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .logout-btn{
+    background:none;border:1.5px solid var(--line);color:var(--ink-soft);
+    font-family:'Instrument Sans',sans-serif;font-size:.78rem;font-weight:600;
+    padding:9px 16px;border-radius:6px;cursor:pointer;transition:.2s;
+  }
+  .logout-btn:hover{border-color:var(--red);color:var(--red);}
+
+  main{max-width:760px;margin:0 auto;padding:clamp(24px,5vw,48px) 20px 60px;}
+  h1{font-family:'Bricolage Grotesque',sans-serif;font-size:1.9rem;font-weight:700;margin-bottom:6px;}
+  .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:32px;line-height:1.6;}
+
+  .panel{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:28px clamp(20px,4vw,32px);margin-bottom:24px;
+    box-shadow:0 12px 36px rgba(28,35,56,.05);
+  }
+  .panel h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:4px;}
+  .panel .panel-sub{font-size:.82rem;color:var(--ink-soft);margin-bottom:22px;}
+
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.field-row{grid-template-columns:1fr;}}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-size:.68rem;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;
+  }
+  .field input{
+    width:100%;font-family:'Instrument Sans',sans-serif;font-size:.95rem;
+    padding:11px 13px;border:1.5px solid var(--line);border-radius:8px;
+    outline:none;transition:.2s;
+  }
+  .field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(82,124,209,.15);}
+
+  .btn{
+    background:var(--blue);color:#fff;border:none;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.86rem;
+    letter-spacing:.04em;text-transform:uppercase;
+    padding:13px 26px;border-radius:8px;cursor:pointer;transition:.2s;
+  }
+  .btn:hover{background:var(--blue-dark);}
+  .btn:disabled{opacity:.6;cursor:not-allowed;}
+  .btn-secondary{
+    background:none;border:1.5px solid var(--line);color:var(--ink);
+  }
+  .btn-secondary:hover{border-color:var(--blue);color:var(--blue-dark);}
+
+  .save-msg{
+    font-size:.82rem;margin-top:16px;padding:10px 12px;border-radius:6px;display:none;
+  }
+  .save-msg.show{display:block;}
+  .save-msg.ok{background:#eafaf1;color:var(--green);}
+  .save-msg.err{background:#fdeaea;color:var(--red);}
+
+  .preview{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px;
+  }
+  @media(max-width:640px){.preview{grid-template-columns:repeat(2,1fr);}}
+  .preview-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:8px;
+    padding:12px 14px;
+  }
+  .preview-card span{display:block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+  .preview-card b{font-family:'Bricolage Grotesque',sans-serif;font-size:.86rem;}
+
+  .instructions{font-size:.85rem;color:var(--ink-soft);line-height:1.7;}
+  .instructions code{background:var(--bg);padding:1px 6px;border-radius:4px;font-size:.82rem;color:var(--ink);}
+  .loading{text-align:center;color:var(--ink-soft);padding:40px 0;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><div class="brand-dot"></div><span>Inner Awakening &middot; Admin Panel</span></div>
+  <button class="logout-btn" id="logoutBtn">Log Out</button>
+</header>
+
+<main>
+  <h1>Event Details</h1>
+  <p class="sub">Update the date, time, duration and language shown on the hero section of the site. Changes save to the server and appear for every visitor the next time the page loads.</p>
+
+  <div id="loadingMsg" class="loading">Loading current details&hellip;</div>
+
+  <div id="content" style="display:none;">
+    <div class="panel">
+      <h2>Edit Details</h2>
+      <p class="panel-sub">These fields match the four cards shown above the "Start Your Journey Now" button.</p>
+
+      <form id="detailsForm">
+        <div class="field-row">
+          <div class="field">
+            <label for="dateVal">Date</label>
+            <input type="text" id="dateVal" placeholder="25 July 2026">
+          </div>
+          <div class="field">
+            <label for="timeVal">Time</label>
+            <input type="text" id="timeVal" placeholder="9:30 AM – 12:30 PM">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="durationVal">Duration</label>
+            <input type="text" id="durationVal" placeholder="3 Hours">
+          </div>
+          <div class="field">
+            <label for="languageVal">Language</label>
+            <input type="text" id="languageVal" placeholder="English & Hindi">
+          </div>
+        </div>
+        <button class="btn" type="submit" id="saveBtn">Save Changes</button>
+        <div class="save-msg" id="saveMsg"></div>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h2>Live Preview</h2>
+      <p class="panel-sub">What visitors currently see, based on the last saved values.</p>
+      <div class="preview" id="previewGrid">
+        <div class="preview-card"><span>Date</span><b id="pvDate">—</b></div>
+        <div class="preview-card"><span>Time</span><b id="pvTime">—</b></div>
+        <div class="preview-card"><span>Duration</span><b id="pvDuration">—</b></div>
+        <div class="preview-card"><span>Language</span><b id="pvLanguage">—</b></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Change Password</h2>
+      <p class="panel-sub">Update the password used to access this panel.</p>
+      <form id="passForm">
+        <div class="field-row">
+          <div class="field">
+            <label for="currentPass">Current Password</label>
+            <input type="password" id="currentPass" required>
+          </div>
+          <div class="field">
+            <label for="newPass2">New Password</label>
+            <input type="password" id="newPass2" required minlength="6">
+          </div>
+        </div>
+        <button class="btn btn-secondary" type="submit" id="passBtn">Update Password</button>
+        <div class="save-msg" id="passMsg"></div>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h2>How this connects to your site</h2>
+      <p class="instructions">
+        Your main site's page fetches these details automatically on load, using the code in <code>site-integration-snippet.html</code>. If your developer already added that snippet, changes here go live immediately — nothing further to do.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+/* Must match the API_BASE set in admin-login.html */
+const API_BASE = 'https://YOUR-BACKEND-URL.example.com';
+
+const TOKEN_KEY = 'ia_admin_token';
+const token = sessionStorage.getItem(TOKEN_KEY);
+
+if (!token) {
+  window.location.href = 'admin-login.html';
+}
+
+function authHeaders() {
+  return { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
+}
+
+function handleAuthFailure(status) {
+  if (status === 401) {
+    sessionStorage.removeItem(TOKEN_KEY);
+    window.location.href = 'admin-login.html';
+    return true;
+  }
+  return false;
+}
+
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  sessionStorage.removeItem(TOKEN_KEY);
+  window.location.href = 'admin-login.html';
+});
+
+function renderPreview(data) {
+  document.getElementById('pvDate').textContent = data.date;
+  document.getElementById('pvTime').textContent = data.time;
+  document.getElementById('pvDuration').textContent = data.duration;
+  document.getElementById('pvLanguage').textContent = data.language;
+}
+
+function fillForm(data) {
+  document.getElementById('dateVal').value = data.date;
+  document.getElementById('timeVal').value = data.time;
+  document.getElementById('durationVal').value = data.duration;
+  document.getElementById('languageVal').value = data.language;
+}
+
+async function loadContent() {
+  try {
+    const res = await fetch(`${API_BASE}/api/content`);
+    if (!res.ok) throw new Error('Failed to load current details.');
+    const data = await res.json();
+    fillForm(data);
+    renderPreview(data);
+    document.getElementById('loadingMsg').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } catch (err) {
+    document.getElementById('loadingMsg').textContent =
+      'Could not reach the admin server. Check that API_BASE in this page is set to your backend\'s live URL.';
+  }
+}
+loadContent();
+
+document.getElementById('detailsForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const btn = document.getElementById('saveBtn');
+  const msg = document.getElementById('saveMsg');
+  const payload = {
+    date: document.getElementById('dateVal').value.trim(),
+    time: document.getElementById('timeVal').value.trim(),
+    duration: document.getElementById('durationVal').value.trim(),
+    language: document.getElementById('languageVal').value.trim(),
+  };
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+  try {
+    const res = await fetch(`${API_BASE}/api/content`, {
+      method: 'PUT',
+      headers: authHeaders(),
+      body: JSON.stringify(payload),
+    });
+    if (handleAuthFailure(res.status)) return;
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Could not save changes.');
+    renderPreview(data);
+    msg.textContent = 'Saved. Live on the site now.';
+    msg.className = 'save-msg show ok';
+  } catch (err) {
+    msg.textContent = err.message;
+    msg.className = 'save-msg show err';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Save Changes';
+    setTimeout(() => msg.classList.remove('show'), 3000);
+  }
+});
+
+document.getElementById('passForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const btn = document.getElementById('passBtn');
+  const msg = document.getElementById('passMsg');
+  const currentPassword = document.getElementById('currentPass').value;
+  const newPassword = document.getElementById('newPass2').value;
+  btn.disabled = true;
+  btn.textContent = 'Updating...';
+  try {
+    const res = await fetch(`${API_BASE}/api/auth/password`, {
+      method: 'PUT',
+      headers: authHeaders(),
+      body: JSON.stringify({ currentPassword, newPassword }),
+    });
+    if (handleAuthFailure(res.status)) return;
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Could not update password.');
+    msg.textContent = 'Password updated.';
+    msg.className = 'save-msg show ok';
+    document.getElementById('passForm').reset();
+  } catch (err) {
+    msg.textContent = err.message;
+    msg.className = 'save-msg show err';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Update Password';
+    setTimeout(() => msg.classList.remove('show'), 3000);
+  }
+});
+</script>
+
+</body>
+</html>
