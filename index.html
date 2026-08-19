@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Inner Awakening Programme 2.0 | Dr. Niraj Rawal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Sekuya&family=WindSong:wght@400;500&display=swap');
+
+/* HEADING FONT OVERRIDE — elegant italic headings, slightly smaller */
+.section-kicker,
+.section-title em,
+.final-cta h2 em,
+.site-footer h1 em,
+.site-footer h2 em,
+.site-footer h3 em,
+.site-footer h4 em,
+.site-footer h5 em,
+.site-footer h6 em,
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em {
+  font-family:'Bricolage Grotesque',sans-serif !important;
+  font-style:italic !important;
+  font-size:1em !important;
+}
+
+</style>
+<style>
+:root {
+  --black:  #ffffff;
+  --black2: #f6f5fb;
+  --black3: #eeecf9;
+  --white:  #211c35;
+  --offwhite: #ffffff;
+ --red:    #527cd1;
+--red2:   #5E8FEF;
+--red3:   #AFC8FF;
+--gold:   #5382d4;
+--gold2:  #5a84cc;
+--gold3:  #F4F8FF;
+  --border-dark:  rgba(33,28,53,0.08);
+  --border-red:   rgba(37,99,235,0.30);
+  --border-gold:  rgba(14,165,233,0.30);
+  --text-m: rgba(0, 0, 0, 0.68);
+  --text-s: rgba(0, 0, 0, 0.46);
+  --navy:   #000000;
+  --navy2:  #05060f;
+  --slate:  #080708;
+  --hero-ink:        #f5f3ff;
+  --hero-ink-muted:  #c3d4f0;
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html {
+  scroll-behavior:smooth;
+  background: #ffffff;
+}
+body {
+  background: transparent;
+  color: var(--white);
+  font-family: 'Instrument Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position:relative;
+}
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; }
+
+/* COSMIC NEBULA AMBIENCE — fixed, behind all content */
+.cosmic-ambience {
+  position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+}
+.cosmic-stars {
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 8% 12%, rgba(219,234,254,.9), transparent),
+    radial-gradient(1px 1px at 22% 68%, rgba(219,234,254,.7), transparent),
+    radial-gradient(1.5px 1.5px at 38% 28%, rgba(219,234,254,.8), transparent),
+    radial-gradient(1px 1px at 52% 82%, rgba(219,234,254,.6), transparent),
+    radial-gradient(1.5px 1.5px at 66% 15%, rgba(219,234,254,.9), transparent),
+    radial-gradient(1px 1px at 78% 55%, rgba(219,234,254,.7), transparent),
+    radial-gradient(1.5px 1.5px at 88% 38%, rgba(219,234,254,.85), transparent),
+    radial-gradient(1px 1px at 95% 78%, rgba(219,234,254,.6), transparent),
+    radial-gradient(1.5px 1.5px at 14% 88%, rgba(219,234,254,.7), transparent),
+    radial-gradient(1px 1px at 44% 5%, rgba(219,234,254,.6), transparent);
+  background-repeat:no-repeat;
+  animation: starTwinkle 6s ease-in-out infinite;
+}
+@keyframes starTwinkle { 0%,100% { opacity:.7; } 50% { opacity:1; } }
+.sunset-sun {
+  position:absolute; left:50%; top:8%; width:min(60vw,620px); height:min(60vw,620px);
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background: radial-gradient(circle, rgba(96,165,250,.55) 0%, rgba(37,99,235,.28) 35%, rgba(37,99,235,0) 70%);
+  filter: blur(6px);
+  animation: sunBreathe 9s ease-in-out infinite;
+}
+.sunset-glow-a, .sunset-glow-b, .sunset-glow-c {
+  position:absolute; border-radius:50%; filter:blur(60px);
+  animation: sunBreathe 12s ease-in-out infinite;
+}
+.sunset-glow-a { width:44vw; height:44vw; left:-10%; top:35%; background:radial-gradient(circle, rgba(37,99,235,.16), transparent 70%); animation-delay:1.5s; }
+.sunset-glow-b { width:38vw; height:38vw; right:-8%; top:55%; background:radial-gradient(circle, rgba(103,232,249,.18), transparent 70%); animation-delay:3s; animation-duration:14s; }
+.sunset-glow-c { width:50vw; height:50vw; left:20%; bottom:-15%; background:radial-gradient(circle, rgba(96,165,250,.14), transparent 70%); animation-delay:.5s; animation-duration:16s; }
+@keyframes sunBreathe {
+  0%,100% { opacity:.75; transform:scale(1); }
+  50%     { opacity:1; transform:scale(1.08); }
+}
+
+/* SCROLL PROGRESS BAR */
+.scroll-progress {
+  position: fixed; top:0; left:0; height:3px; width:0%;
+  z-index: 999;
+  background: linear-gradient(90deg, var(--red), var(--gold2));
+  box-shadow: 0 0 12px rgba(37,99,235,.6);
+  transition: width .08s linear;
+}
+
+/* small logo container reused in the footer */
+.nav-logo-circle {
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.nav-logo-circle img { height:100%; width:auto; object-fit:contain; }
+
+/* NAV — normal top bar: logo on the left, CTA button on the extreme right */
+.nav {
+  position: absolute; top:0; left:0; right:0; z-index:200;
+  background: transparent;
+  display: flex; align-items:flex-start; justify-content:space-between;
+  gap:12px;
+  padding: 22px clamp(18px,4vw,50px) 0;
+  height: auto;
+  pointer-events:none;
+}
+.nav-brand, .nav-cta { pointer-events:auto; } /* re-enable clicks on actual elements */
+
+.nav-brand { display:flex; align-items:center; gap:12px; min-width:0; }
+.nav-logo {
+  height:60px; width:auto; max-width:180px; object-fit:contain; flex:none;
+}
+.nav-brand-text strong { font-size:1rem; }
+.nav-brand-text span {
+  display:block;
+  font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold);
+  line-height:1.3;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+
+.nav-cta {
+  background: var(--red);
+  color:#fff; font-weight:700; font-size:.72rem;
+  letter-spacing:.1em; text-transform:uppercase;
+  padding:12px 26px; border-radius:6px; cursor:pointer;
+  transition:.25s; white-space:nowrap;
+  border:1px solid rgba(147,197,253,.3);
+  box-shadow:0 8px 24px rgba(37,99,235,.25);
+}
+/* Below this width the CTA button and the brand text start to collide,
+   so the button is hidden here — the hero already has its own CTA. */
+@media(max-width:600px) {
+  .nav { padding: 16px 16px 0; }
+  .nav-logo { height:44px; }
+  .nav-cta { display:none; }
+}
+
+/* HERO */
+.hero {
+  position:relative;
+  min-height: auto;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center;
+  padding: 50px clamp(20px,5vw,60px) 40px;
+  overflow:hidden;
+  background: linear-gradient(180deg, #dfe9fb 0%, #eef3fc 28%, #f8fafd 62%, #ffffff 100%);
+}
+.hero-bg {
+  position:absolute; inset:-10% 0 0 0; z-index:0;
+  
+}
+/* Lotus watermark field — tiled, low-opacity, scattered across the hero */
+.hero-lotus-bg {
+  position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+}
+.hero-lotus-bg svg.lotus-mark {
+  position:absolute; opacity:.35; color:#7fa4e8;
+  animation: lotusDrift 9s ease-in-out infinite;
+}
+@keyframes lotusDrift {
+  0%,100% { transform:translateY(0) rotate(0deg); }
+  50%     { transform:translateY(-10px) rotate(2deg); }
+}
+.hero-inner{
+    position:relative; z-index:1;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+.hero-top-badge {
+  display:flex; justify-content:center; margin-bottom:10px;
+  opacity:0; animation: heroFadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.05s;
+}
+.hero-top-badge svg { width:34px; height:34px; color:#3f6bc4; animation: lotusDrift 5s ease-in-out infinite; }
+.hero-eyebrow {
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.8rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:#3f6bc4; margin-bottom:8px;
+  opacity:0; animation: heroFadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.16s;
+}
+.hero-eyebrow .line { width:38px; height:1px; background:currentColor; opacity:.45; flex:none; }
+@media (max-width:480px){
+  .hero-eyebrow { font-size:.62rem; letter-spacing:.14em; gap:8px; }
+  .hero-eyebrow .line { width:20px; }
+}
+
+.hero h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:clamp(2.6rem,10vw,4.6rem);
+    font-weight:800;
+    line-height:1;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    margin-bottom:0;
+    padding-bottom:0;
+    opacity:0;
+    animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) both; animation-delay:.28s;
+
+    background:linear-gradient(
+        135deg,
+        #1F2A5A 0%,
+        #2c4380 55%,
+        #3a5aa8 100%
+    );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h1 .em-gold{
+    display:block;
+    font-style:italic;
+    font-family:'WindSong',cursive;
+    font-weight:500;
+    line-height:1.05;
+    padding-bottom:.08em;
+    margin-top:.02em;
+    font-size: clamp(2.6rem,11vw,5.4rem);
+    text-transform: none;
+    letter-spacing:0;
+
+    background:linear-gradient(
+        90deg,
+        #6d93e0 0%,
+        #3f6bc4 45%,
+        #6d93e0 100%
+    );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h1 .hero-title-sub{
+    display:block;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-style:normal;
+    font-weight:700;
+    font-size:clamp(1rem,3.4vw,1.6rem);
+    letter-spacing:.24em;
+    color:#1F2A5A;
+    -webkit-text-fill-color:#1F2A5A;
+    background:none;
+    margin-top:.14em;
+}
+
+.hero-title-orn {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  margin:16px auto 6px; color:#3f6bc4; opacity:.55;
+  opacity:0; animation: heroFadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.4s;
+}
+.hero-title-orn .line { width:52px; height:1px; background:currentColor; }
+.hero-title-orn svg { width:14px; height:14px; }
+
+.hero-hook{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-style:normal;
+    font-size:clamp(.82rem,2vw,1rem);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    max-width:1000px;
+    margin:6px auto 0;
+    font-weight:700;
+    text-align:center;
+    line-height:1.7;
+    opacity:0; animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) both; animation-delay:.5s;
+}
+.hero-hook .line-a { display:block; color:#3f6bc4; }
+.hero-hook .line-b { display:block; color:#1F2A5A; }
+.hero-info-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  max-width:1080px;
+  margin:30px auto 0;
+  background:#f4f7fd;
+  border:1px solid rgba(93,147,234,.14);
+  border-radius:16px;
+  padding:20px 10px;
+  box-shadow:0 18px 44px rgba(63,107,196,.08);
+  opacity:0; animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) both; animation-delay:1.05s;
+}
+.hero-info-card {
+  display:flex; align-items:flex-start; gap:12px;
+  background:transparent;
+  border-right:1px solid rgba(93,147,234,.14);
+  padding:6px 16px;
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+.hero-info-card:last-child { border-right:none; }
+.hero-info-card:hover { transform:translateY(-3px); }
+.hero-info-icon {
+  width:44px; height:44px; flex:none;
+  display:grid; place-items:center;
+  background:rgba(63,107,196,.12);
+  border-radius:50%;
+  color:#3f6bc4;
+  transition: background .3s ease, transform .3s ease;
+}
+.hero-info-card:hover .hero-info-icon { background:rgba(63,107,196,.2); transform:scale(1.06); }
+.hero-info-icon svg { width:22px; height:22px; }
+.hero-info-content { display:flex; flex-direction:column; text-align:left; }
+.hero-info-content span {
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.78rem; letter-spacing:.02em; text-transform:uppercase; color:#1F2A5A;
+  font-weight:800; line-height:1.3; margin-bottom:3px;
+}
+.hero-info-content h4 {
+  font-family:'Instrument Sans',sans-serif;
+  font-size:.82rem; font-weight:400; color:var(--text-m); line-height:1.4;
+}
+@media(max-width:900px) {
+  .hero-info-grid { grid-template-columns:repeat(2,1fr); gap:18px 0; padding:22px 16px; }
+  .hero-info-card { border-right:none; padding:4px 6px; }
+  .hero-info-card:nth-child(odd) { border-right:1px solid rgba(93,147,234,.14); }
+}
+@media(max-width:520px) {
+  .hero-info-grid { grid-template-columns:1fr; gap:16px 0; }
+  .hero-info-card:nth-child(odd) { border-right:none; }
+  .hero-info-card { border-bottom:1px solid rgba(93,147,234,.14); padding-bottom:14px; }
+  .hero-info-card:last-child { border-bottom:none; padding-bottom:4px; }
+}
+
+
+.hero-cta-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin:26px auto 0;
+    padding:17px 44px;
+
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 50%,#1e3a8a 100%);
+    color:#fff9f0;
+
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:1rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+
+    white-space:nowrap;      /* Prevent wrapping */
+    box-shadow:0 16px 36px rgba(109,40,217,.32);
+    transition:.3s;
+}
+
+.hero-cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 44px rgba(109,40,217,.42);
+}
+@media (max-width:768px){
+
+    .hero-cta-btn{
+        font-size:1rem;
+        letter-spacing:.02em;
+        padding:16px 40px;
+        width:auto;
+        max-width:95%;
+        white-space:nowrap;
+    }
+
+    .hero-hook{
+        max-width:none;
+        font-size:.75rem;
+        line-height:1.6;
+        padding: none;
+    }
+
+}
+
+
+/* HERO STATS */
+.stats-strip {
+  background: var(--black);
+  padding: 40px clamp(20px,5vw,80px) 46px;
+  border-bottom: 1px solid var(--border-dark);
+}
+.stats-strip-inner {
+  display:flex; gap:0; justify-content:center;
+  max-width:720px; margin:0 auto;
+}
+.hero-stat {
+  flex:1; padding:0 14px; text-align:center;
+  border-right:1px solid var(--border-dark);
+}
+.hero-stat:last-child { border-right:none; }
+.hero-stat-val {
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:1.8rem; font-weight:700;
+  color:var(--gold2); line-height:1.1;
+}
+.hero-stat-label { font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-s); margin-top:6px; }
+
+/* ============ ABSTRACT FLOWING CURVES ============ */
+.hero-curves {
+  position:absolute; inset:0; z-index:1; width:100%; height:100%;
+  pointer-events:none; opacity:.8;
+}
+.section-curves {
+  position:absolute; inset:0; z-index:0; width:100%; height:100%;
+  pointer-events:none; opacity:.5;
+}
+
+/* ============ BOXED VIDEO CARD (in-hero, cinematic reveal) ============ */
+.hero-video-wrap { margin:30px auto 0; max-width:min(900px, 92vw); width:100%; }
+.hero-video-caption {
+  text-align:center; margin-bottom:14px;
+  font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color: #233B6E; opacity:.85;
+}
+.hero-video-caption span { color:var(--gold2); font-weight:700; }
+.hero-video-card {
+  position:relative;
+  width:100%; aspect-ratio:16/9;
+  border-radius:20px; overflow:hidden;
+  background:#000;
+  border:1px solid rgba(147,197,253,.35);
+  box-shadow: 0 24px 70px rgba(63,107,196,.22), 0 0 0 1px rgba(103,232,249,.08);
+}
+
+/* Left / right overlay captions on the poster image */
+.hero-video-text-l, .hero-video-text-r {
+  position:absolute; top:50%; transform:translateY(-50%); z-index:3;
+  max-width:34%; text-align:left; pointer-events:none;
+  text-shadow:0 1px 8px rgba(255,255,255,.7), 0 1px 2px rgba(255,255,255,.9);
+}
+.hero-video-text-l { left:5%; }
+.hero-video-text-r { right:5%; text-align:right; }
+.hero-video-text-l .l1, .hero-video-text-r .l1 {
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(.62rem,1.6vw,.86rem);
+  letter-spacing:.1em; text-transform:uppercase; color:#1F2A5A; line-height:1.5;
+}
+.hero-video-text-l .l2 {
+  display:block; font-family:'WindSong',cursive; font-style:italic; font-weight:500;
+  font-size:clamp(1rem,3vw,1.5rem); color:#3f6bc4; margin-top:2px; line-height:1.2;
+}
+@media (max-width:640px){
+  .hero-video-text-l, .hero-video-text-r { max-width:26%; }
+  .hero-video-text-l .l1, .hero-video-text-r .l1 { font-size:.56rem; letter-spacing:.05em; }
+  .hero-video-text-l .l2 { font-size:.92rem; }
+}
+@media (max-width:440px){
+  .hero-video-text-l, .hero-video-text-r { display:none; }
+}
+
+/* Decorative (non-functional) control bar shown on the poster before play */
+.hero-video-controls-decor {
+  position:absolute; left:0; right:0; bottom:0; z-index:3;
+  display:flex; align-items:center; gap:10px;
+  padding:9px 14px;
+  background:linear-gradient(0deg, rgba(10,16,35,.62), rgba(10,16,35,.28));
+  color:#fff; font-family:'Instrument Sans',sans-serif; font-size:.72rem;
+  transition:opacity .35s ease;
+}
+.movie-frame.playing .hero-video-controls-decor { opacity:0; pointer-events:none; }
+.hero-video-controls-decor svg { width:15px; height:15px; flex:none; opacity:.9; }
+.hero-video-controls-decor .vcd-time { white-space:nowrap; opacity:.9; }
+.hero-video-controls-decor .vcd-bar { flex:1; height:3px; border-radius:2px; background:rgba(255,255,255,.3); overflow:hidden; }
+.hero-video-controls-decor .vcd-bar-fill { width:6%; height:100%; background:#5c84c4; }
+.hero-video-controls-decor .vcd-icons { display:flex; align-items:center; gap:10px; margin-left:auto; }
+@media (max-width:480px){
+  .hero-video-controls-decor { padding:7px 10px; gap:7px; }
+  .hero-video-controls-decor .vcd-time { font-size:.6rem; }
+}
+
+/* Presenter credit line beneath the video */
+.hero-presenter {
+  margin-top:20px; text-align:center;
+  opacity:0; animation: heroFadeUp .8s cubic-bezier(.22,1,.36,1) both; animation-delay:.95s;
+}
+.hero-presenter h3 {
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:700;
+  font-size:clamp(1.2rem,3vw,1.6rem); color:#1F2A5A;
+}
+.hero-presenter-role {
+  margin-top:4px; font-size:.76rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:#3f6bc4;
+}
+.movie-frame {
+  position:absolute; inset:0;
+}
+.vsl-video {
+  position:absolute; inset:0; z-index:1;
+  width:100%; height:100%; object-fit:cover; background:#000;
+}
+.vsl-video-scrim {
+  position:absolute; inset:0; z-index:2;
+  background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%);
+  transition: opacity .5s ease;
+  pointer-events:none;
+}
+.movie-frame.playing .vsl-video-scrim { opacity:0; }
+
+.vsl-play-btn {
+  position:absolute; top:50%; left:50%; z-index:4;
+  transform:translate(-50%,-50%);
+  width:min(84px,18vw); height:min(84px,18vw);
+  background:none; border:none; padding:0; cursor:pointer;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,.5));
+  transition: transform .3s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+  animation: vslPulse 2.6s ease-in-out infinite;
+}
+.vsl-play-btn:hover { transform:translate(-50%,-50%) scale(1.08); animation-play-state:paused; }
+.vsl-play-btn svg circle.vsl-ring { transition: stroke-opacity .3s; }
+.vsl-play-btn svg circle.vsl-fill { fill:var(--red); transition: fill .25s; }
+.vsl-play-btn:hover svg circle.vsl-fill { fill:var(--red2); }
+.movie-frame.playing .vsl-play-btn { opacity:0; pointer-events:none; transform:translate(-50%,-50%) scale(.8); }
+@keyframes vslPulse {
+  0%,100% { filter: drop-shadow(0 12px 32px rgba(0,0,0,.5)) drop-shadow(0 0 0 rgba(37,99,235,.35)); }
+  50%     { filter: drop-shadow(0 12px 32px rgba(0,0,0,.5)) drop-shadow(0 0 16px rgba(37,99,235,.55)); }
+}
+
+.movie-play-hint {
+  position:absolute; bottom:16px; left:50%; transform:translateX(-50%); z-index:3;
+  font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(219,234,254,.65);
+  transition:opacity .4s ease;
+}
+.movie-frame.playing .movie-play-hint { opacity:0; pointer-events:none; }
+
+/* CTA BLOCK */
+.cta-block { padding:64px clamp(20px,5vw,80px) 64px; text-align:center; }
+.cta-note-small { font-size:1rem; color:var(--text-s); margin-bottom:32px; }
+
+.btn-enroll{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+
+    background:var(--red);
+    color:#fff;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1rem;
+    font-weight:800;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+
+    padding:20px 52px;
+    border-radius:4px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+
+    white-space:nowrap;   /* Prevent text wrapping */
+
+    box-shadow:0 10px 40px rgba(37,99,235,.4);
+    transition:.3s;
+    border:1px solid rgba(147,197,253,.25);
+}
+
+.btn-enroll:hover{
+    background:var(--red2);
+    transform:translateY(-3px);
+    box-shadow:0 18px 50px rgba(37,99,235,.5);
+}
+
+.btn-enroll-arrow{
+    font-size:1.25rem;
+    flex-shrink:0;
+}
+
+
+.btn-wa {
+  display:inline-flex; align-items:center; gap:9px;
+  background:rgba(224,236,255,.04); border:1px solid rgba(224,236,255,.18);
+  color:rgba(224,236,255,.7); font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  padding:13px 26px; border-radius:4px; cursor:pointer; transition:.25s; margin-top:14px;
+}
+.btn-wa:hover { border-color:var(--red); color:var(--red); }
+
+.cta-guarantees {
+  display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-top:28px;
+}
+.cta-guarantee-item { display:flex; align-items:center; gap:8px; font-size:.76rem; color:var(--text-s); }
+/* Mobile CTA */
+@media (max-width:768px){
+
+    .cta-block{
+        padding:20px 20px;
+    }
+
+    .btn-enroll{
+        width:100%;
+        max-width:360px;
+        padding:10px 15px;
+        font-size:1rem;
+        letter-spacing:.02em;
+        white-space:nowrap;
+    }
+
+    .btn-wa{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+        font-size:1rem;
+    }
+
+    .cta-guarantees{
+        gap:14px;
+    }
+
+}
+/* DIVIDER */
+.divider { border:none; border-top:1px solid rgba(224,236,255,.10); margin:0 clamp(20px,5vw,80px); }
+
+/* SECTIONS */
+.section { padding:10px clamp(20px,5vw,20px); }
+.section-kicker {
+  font-family:'WindSong',cursive;
+  font-size:5rem; letter-spacing:.01em; text-transform:none;
+  font-weight:400; color:var(--gold2); margin-bottom:4px; text-indent:.1em;
+  line-height:1;
+}
+.section-title {
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.7rem); font-weight:700; line-height:1.12;
+  margin-bottom:40px; max-width:none; color:var(--white);
+}
+.section-title em { font-style:normal; font-family:'Bricolage Grotesque',sans-serif; color:var(--gold2); }
+/* ===========================
+   LEARN GRID
+=========================== */
+
+.learn-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:20px;
+}
+
+.learn-card{
+    position:relative;
+    overflow:hidden;
+
+    background:#e4e9f4;
+    border:none;
+    border-radius:20px;
+    padding:24px 20px;
+    box-shadow:none;
+
+    opacity:0;
+    transform:translateY(60px) scale(.96);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,1,.36,1),
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+/* Scroll reveal */
+
+.learn-card.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+/* Hover */
+
+.learn-card:hover{
+    background:#ffffff;
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 18px 45px rgba(8,85,238,.18);
+}
+
+/* Shine effect */
+
+.learn-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.35),
+        transparent 45%
+    );
+    opacity:0;
+    transition:opacity .35s ease;
+    pointer-events:none;
+}
+
+.learn-card:hover::before{
+    opacity:1;
+}
+
+/* Stagger delay */
+
+.learn-card:nth-child(1){transition-delay:.05s;}
+.learn-card:nth-child(2){transition-delay:.12s;}
+.learn-card:nth-child(3){transition-delay:.19s;}
+.learn-card:nth-child(4){transition-delay:.26s;}
+.learn-card:nth-child(5){transition-delay:.33s;}
+.learn-card:nth-child(6){transition-delay:.40s;}
+.learn-card:nth-child(7){transition-delay:.47s;}
+.learn-card:nth-child(8){transition-delay:.54s;}
+.learn-card:nth-child(9){transition-delay:.61s;}
+.learn-card:nth-child(10){transition-delay:.68s;}
+
+/* Card content */
+
+.learn-card-icon{
+    font-size:1.5rem;
+    margin-bottom:14px;
+}
+
+.learn-card h3{
+    font-size:.96rem;
+    font-weight:700;
+    margin-bottom:7px;
+    color:var(--white);
+}
+
+.learn-card p{
+    font-size:.85rem;
+    color:var(--text-m);
+    line-height:1.65;
+}
+
+/* CTA */
+
+.section-cta{
+    margin-top:40px;
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.section-cta .btn-enroll{
+    animation:none;
+}
+
+/* ===========================
+   ABOUT GRID
+=========================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    
+    gap:20px;
+    align-items:start;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+@media (max-width:800px){
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+}
+
+/* PICTURE UPLOAD ZONE */
+.pic-zone {
+  position:relative;
+  width:100%; aspect-ratio:3/4;
+  border-radius:12px;
+  
+  background:var(--black2);
+  overflow:hidden;
+}
+.pic-photo-img { position:relative; z-index:1; width:100%; height:100%; object-fit:cover; object-position:center top; }
+.about-stats { 
+  display:flex; 
+  gap:24px; 
+  flex-wrap:nowrap; 
+  justify-content:flex-start;
+  margin-top:28px; 
+}
+.about-stat-val { font-family:'Bricolage Grotesque',sans-serif; font-size:1.7rem; font-weight:700; color:var(--gold2); }
+.about-stat-label { font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-s); margin-top:2px; }
+
+/* WHO IS IT FOR */
+.who-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media(max-width:580px) { .who-grid { grid-template-columns:1fr; } }
+.who-item {
+  display:flex; gap:12px; align-items:flex-start;
+  background:var(--black2); border:1px solid rgba(224,236,255,.08);
+  border-radius:8px; padding:14px 16px;
+  font-size:.88rem; color:var(--text-m); line-height:1.55; transition:.25s;
+}
+.who-item:hover { border-color:var(--border-red); background:rgba(37,99,235,.05); }
+.who-check {
+  width:22px; height:22px; border-radius:50%; flex:none; margin-top:1px;
+  background:var(--red); display:grid; place-items:center;
+  font-size:.6rem; font-weight:700; color:#fff;
+}
+
+/* TESTIMONIAL CAROUSEL */
+.testi-carousel { position:relative; max-width:1200px; margin:0 auto; }
+.testi-track {
+  display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding-bottom:8px; scrollbar-width:none;
+}
+.testi-track::-webkit-scrollbar { display:none; }
+.testi-card {
+  background:var(--black2); border:1px solid rgba(224,236,255,.09);
+  border-radius:10px; padding:10px 15px; position:relative; overflow:hidden; transition:.3s;
+  flex:0 0 clamp(260px, 32%, 360px); scroll-snap-align:start;
+}
+.testi-card::before {
+  content:'"';
+  position:absolute; top:-14px; left:14px;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:7rem;
+  color:rgba(37,99,235,.10); line-height:1; pointer-events:none;
+}
+.testi-card:hover { border-color:var(--border-red); transform:translateY(-2px); }
+.testi-card p { font-family:'Bricolage Grotesque',sans-serif; font-style:italic; font-size:1.06rem; color:var(--text-m); line-height:1.65; margin-bottom:14px; }
+.testi-who { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold2); }
+.testi-avatar-row { display:flex; align-items:center; gap:12px; margin-bottom:14px; position:relative; z-index:1; }
+.testi-avatar { width:46px; height:46px; font-size:.6rem; flex:none; }
+.testi-nav { display:flex; justify-content:center; gap:14px; margin-top:22px; }
+.testi-arrow {
+  width:44px; height:44px; border-radius:50%; flex:none;
+  background:var(--black2); border:1.5px solid rgba(93,147,234,.3);
+  color:#1F2A5A; font-size:1.1rem; cursor:pointer;
+  display:grid; place-items:center; transition:.25s;
+}
+.testi-arrow:hover { background:var(--red); border-color:var(--red); color:#fff; transform:translateY(-2px); }
+/* VIDEO TESTIMONIALS ROW */
+/* VIDEO TESTIMONIALS — landscape grid */
+.vtesti-wrap { margin-bottom: 34px; max-width:720px; margin-left:auto; margin-right:auto; }
+.vtesti-track {
+  display:flex;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  gap:20px;
+  padding-bottom:2px;
+}
+.vtesti-track::-webkit-scrollbar { display:none; }
+
+.vtesti-card {
+  position:relative;
+  aspect-ratio:16/9;
+  border-radius:12px; overflow:hidden;
+  background:#000;
+  border:1.5px solid rgba(93,147,234,.35);
+  box-shadow:0 12px 32px rgba(63,107,196,.16), 0 0 0 1px rgba(255,255,255,.4) inset;
+  cursor:pointer;
+  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  flex: 0 0 100%;
+  scroll-snap-align:start;
+}
+
+.vtesti-card:hover {
+  border-color: var(--red);
+  box-shadow:0 18px 44px rgba(63,107,196,.28), 0 0 0 1px rgba(255,255,255,.4) inset;
+  transform: translateY(-3px);
+}
+.vtesti-card video {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit: contain;
+  background:#000;
+}
+.vtesti-card video:fullscreen,
+.vtesti-card video:-webkit-full-screen {
+  object-fit: contain;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+.vtesti-card .vtesti-scrim {
+  position:absolute; inset:0; z-index:2;
+  background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.05) 22%, rgba(0,0,0,.05) 60%, rgba(0,0,0,.7) 100%);
+  transition:opacity .35s ease; pointer-events:none;
+}
+.vtesti-card.playing .vtesti-scrim { opacity:0; }
+.vtesti-play {
+  position:absolute; top:50%; left:50%; z-index:3;
+  transform:translate(-50%,-50%);
+  width:64px; height:64px;
+  transition:opacity .3s ease, transform .3s ease;
+}
+.vtesti-card:hover .vtesti-play { transform:translate(-50%,-50%) scale(1.08); }
+.vtesti-card.playing .vtesti-play { opacity:0; pointer-events:none; }
+
+.vtesti-topbar {
+  position:absolute; top:0; left:0; right:0; z-index:3;
+  display:flex; align-items:center; gap:10px;
+  padding:12px 14px;
+  transition:opacity .3s ease;
+}
+.vtesti-card.playing .vtesti-topbar { opacity:0; pointer-events:none; }
+.vtesti-avatar {
+  width:34px; height:34px; border-radius:50%; flex:none;
+  object-fit:cover; border:1.5px solid rgba(255,255,255,.5);
+}
+.vtesti-title { min-width:0; }
+.vtesti-title .t1 {
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:.82rem;
+  color:#fff; line-height:1.25;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.vtesti-title .t2 {
+  font-size:.68rem; color:rgba(255,255,255,.7); margin-top:1px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+
+.vtesti-nav { display:flex; justify-content:center; gap:16px; margin-top:18px; }
+.vtesti-arrow {
+  width:44px; height:44px; border-radius:50%; flex:none;
+  background:var(--black2); border:1.5px solid rgba(93,147,234,.3);
+  color:#1F2A5A; font-size:1.1rem; cursor:pointer;
+  display:grid; place-items:center; transition:.25s;
+}
+.vtesti-arrow:hover { background:var(--red); border-color:var(--red); color:#fff; transform:translateY(-2px); }
+
+@media(max-width:900px) {
+  .vtesti-track { gap:14px; }
+}
+@media(max-width:560px) {
+  .vtesti-track { gap:12px; }
+  .vtesti-play { width:52px; height:52px; }
+  .vtesti-topbar { padding:10px 10px; gap:8px; }
+  .vtesti-avatar { width:30px; height:30px; }
+  .vtesti-title .t1 { font-size:.76rem; }
+  .vtesti-title .t2 { font-size:.64rem; }
+}
+/* FAQ */
+.faq-list { display:flex; flex-direction:column; gap:8px; }
+.faq-item { border:1px solid rgba(224,236,255,.09); border-radius:8px; overflow:hidden; background:var(--black2); }
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  padding:18px 22px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:.94rem; font-weight:600;
+  color:var(--white); text-align:left; transition:.25s;
+}
+.faq-q:hover { color:var(--gold2); }
+.faq-plus { font-size:1.4rem; color:var(--red2); flex:none; transition:transform .3s; line-height:1; }
+.faq-item.open .faq-plus { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.faq-a p { padding:0 22px 18px; font-size:.88rem; color:var(--text-m); line-height:1.72; }
+
+/* FINAL CTA */
+.final-cta { padding:25px clamp(20px,5vw,80px) 10px; text-align:center; position:relative; overflow:hidden; }
+.final-cta-bg {
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(37,99,235,.12) 0%, transparent 65%);
+}
+.final-cta-inner { position:relative; z-index:2; max-width:680px; margin:0 auto; }
+.final-cta h2 {
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(2.2rem,5.5vw,3.5rem); font-weight:900; line-height:1.07;
+  margin-bottom:18px; color:var(--white);
+}
+.final-cta h2 em { font-style:normal; font-family:'Bricolage Grotesque',sans-serif; color:var(--gold2); }
+.final-cta p { font-size:1rem; color:var(--text-m); line-height:1.72; margin-bottom:38px; max-width:520px; margin-left:auto; margin-right:auto; }
+
+/* HERO ENTRANCE DRAMA — timed to finish opening right after the cinematic curtain parts */
+@keyframes heroFadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@keyframes heroCardFlip { from { opacity:0; transform:rotateY(-85deg) scale(.94); } to { opacity:1; transform:rotateY(0deg) scale(1); } }
+.hero-cta-btn {
+  opacity:0;
+  animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-video-wrap {
+  opacity:0; perspective:1400px;
+  animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-video-wrap .hero-video-card {
+  transform-origin:left center;
+  animation: heroCardFlip .7s cubic-bezier(.22,1,.36,1) both;
+}
+/* Full staggered reveal sequence — body always carries .no-cine-intro,
+   so these compound rules are the ones that actually take effect. */
+.no-cine-intro .hero-top-badge    { animation-delay:.05s; }
+.no-cine-intro .hero-eyebrow      { animation-delay:.14s; }
+.no-cine-intro .hero h1           { animation-delay:.22s; }
+.no-cine-intro .hero-title-orn    { animation-delay:.32s; }
+.no-cine-intro .hero-hook         { animation-delay:.4s; }
+.no-cine-intro .hero-video-wrap   { animation-delay:.5s; }
+.no-cine-intro .hero-video-wrap .hero-video-card { animation-delay:.6s; }
+.no-cine-intro .hero-presenter    { animation-delay:.78s; }
+.no-cine-intro .hero-info-grid    { animation-delay:.88s; }
+.no-cine-intro .hero-cta-btn      { animation-delay:1s; }
+
+/* CTA GLOW PULSE */
+@keyframes ctaGlow {
+  0%,100% { box-shadow:0 10px 40px rgba(37,99,235,.4), 0 0 0 0 rgba(37,99,235,.35); }
+  50%     { box-shadow:0 10px 40px rgba(37,99,235,.55), 0 0 0 12px rgba(37,99,235,0); }
+}
+.btn-enroll { animation: ctaGlow 2.6s ease-in-out infinite; }
+.btn-enroll:hover { animation-play-state:paused; }
+
+/* CORE TRUTH */
+.truth-section {
+  max-width:1000px; margin:0 auto;
+  position:relative;
+}
+.truth-agebadge {
+  display:inline-flex; flex-direction:column; align-items:center; gap:2px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 55%, var(--red) 100%);
+  border-radius:18px; padding:18px 32px; margin-bottom:26px;
+  box-shadow: 0 14px 34px rgba(37,99,235,.35);
+}
+.truth-agebadge b { font-family:'Bricolage Grotesque',sans-serif; font-size:2rem; font-weight:800; color:#fff; line-height:1; }
+.truth-agebadge span { font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.truth-body p {
+  font-size:1rem; color:var(--text-m); line-height:1.85; margin-bottom:20px; max-width:900px;
+}
+.truth-highlight {
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-style:italic;
+  font-size:clamp(1.35rem,3.2vw,1.9rem); line-height:1.5;
+  color:rgba(224,236,255,.16);
+  margin:34px 0; max-width:900px;
+}
+.truth-highlight .w {
+  display:inline-block;
+  color: var(--white);
+  opacity:0; filter:blur(4px); transform:translateY(6px);
+  transition: opacity .5s ease, filter .5s ease, transform .5s ease;
+}
+.truth-highlight .w.lit { opacity:1; filter:blur(0); transform:translateY(0); color:var(--gold2); }
+.truth-note {
+  border:1.5px solid var(--border-gold);
+  background:rgba(37,99,235,.05);
+  padding:18px 22px; border-radius:12px;
+  font-size:.92rem; color:var(--text-m); line-height:1.75;
+}
+.truth-note b { color:var(--white); }
+
+/* MODAL */
+.overlay {
+  position:fixed; inset:0; z-index:900;
+  background:rgba(5,6,15,.55); backdrop-filter:blur(10px);
+  display:flex; align-items:center; justify-content:center;
+  padding:20px; opacity:0; pointer-events:none; transition:opacity .35s;
+}
+.overlay.open { opacity:1; pointer-events:all; }
+.modal {
+  background:var(--black2); border:1px solid rgba(37,99,235,.3);
+  border-radius:16px; width:100%; max-width:480px; max-height:92vh;
+  overflow-y:auto; transform:translateY(30px) scale(.97); transition:transform .35s;
+  box-shadow:0 40px 100px rgba(0,0,0,.8), 0 0 60px rgba(37,99,235,.12);
+}
+.overlay.open .modal { transform:translateY(0) scale(1); }
+.modal-top { padding:28px 28px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.modal-title { font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:700; color:var(--white); line-height:1.2; }
+.modal-sub { font-size:.78rem; color:var(--text-s); margin-top:4px; }
+.modal-close { background:rgba(224,236,255,.06); border:none; border-radius:50%; width:34px; height:34px; cursor:pointer; display:grid; place-items:center; font-size:1rem; color:var(--text-s); flex:none; transition:.2s; }
+.modal-close:hover { background:rgba(224,236,255,.12); color:var(--red); }
+.modal-course-badge { margin:16px 28px 0; background:rgba(37,99,235,.10); border:1px solid rgba(37,99,235,.25); border-radius:8px; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.modal-course-name { font-size:.86rem; font-weight:700; color:var(--white); }
+.modal-form { padding:22px 28px 28px; display:flex; flex-direction:column; gap:14px; }
+.field { display:flex; flex-direction:column; gap:6px; }
+.field label { font-size:.67rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-s); }
+.field input, .field select { font-family:'Instrument Sans',sans-serif; font-size:.92rem; background:rgba(33,28,53,.03); border:1.5px solid rgba(33,28,53,.14); border-radius:6px; padding:12px 14px; outline:none; color:var(--white); transition:border-color .2s, box-shadow .2s; width:100%; }
+.field input::placeholder { color:rgba(224,236,255,.32); }
+.field input:focus, .field select:focus { border-color:var(--red2); box-shadow:0 0 0 3px rgba(37,99,235,.15); }
+.field select option { background:var(--black2); color:var(--white); }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.modal-submit { font-family:'Bricolage Grotesque',sans-serif; font-size:.92rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; background:var(--red); color:#fff; padding:17px; border-radius:4px; border:none; cursor:pointer; width:100%; margin-top:6px; transition:.3s; box-shadow:0 6px 24px rgba(37,99,235,.35); border:1px solid rgba(147,197,253,.2); }
+.modal-submit:hover { background:var(--red2); transform:translateY(-2px); box-shadow:0 12px 32px rgba(37,99,235,.5); }
+.modal-submit:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+.modal-note { font-size:.7rem; color:var(--text-s); text-align:center; line-height:1.6; }
+.modal-note a { color:var(--gold2); }
+.modal-success { padding:52px 28px; text-align:center; flex-direction:column; align-items:center; gap:14px; display:none; }
+.modal-success.show { display:flex; }
+.modal-form.hide { display:none; }
+.success-icon { width:72px; height:72px; border-radius:50%; background:rgba(37,99,235,.12); border:2px solid rgba(37,99,235,.35); display:grid; place-items:center; font-size:2.2rem; }
+.modal-success h3 { font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; color:var(--gold2); }
+.modal-success p { font-size:.88rem; color:var(--text-m); line-height:1.65; max-width:320px; }
+.redirect-note { font-size:.76rem; color:var(--gold2); margin-top:8px; }
+
+/* ===== ONE-ON-ONE FLOATING SIDE BUTTON ===== */
+.oneonone-fab {
+  position: fixed; right: 0; top: 50%; z-index: 250;
+  transform: translateY(-50%);
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 60%, #1e3a8a 100%);
+  color: #fff; border: none; cursor: pointer;
+  padding: 16px 20px 16px 18px;
+  border-radius: 10px 0 0 10px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
+  box-shadow: -8px 8px 30px rgba(37,99,235,.35);
+  transition: padding .3s ease, transform .25s ease, box-shadow .25s ease;
+  writing-mode: horizontal-tb;
+}
+.oneonone-fab svg { width: 20px; height: 20px; flex: none; stroke: #fff; fill: none; stroke-width: 2; }
+.oneonone-fab:hover { padding-right: 26px; box-shadow: -10px 10px 38px rgba(37,99,235,.48); }
+@media (max-width: 640px) {
+  .oneonone-fab {
+    top: auto;
+    bottom: 22px;
+    right: 16px;
+    transform: none;
+    border-radius: 50px;
+    padding: 12px 18px;
+    gap: 8px;
+  }
+  .oneonone-fab span { display: inline; font-size: .68rem; }
+  .oneonone-fab svg { width: 18px; height: 18px; }
+  .ad-popup { bottom: 92px; right: 12px; }
+}
+
+
+/* ===== ONE-ON-ONE AD POPUP (ad sized, bottom-right) ===== */
+.ad-popup {
+  position: fixed; right: 22px; bottom: 22px; z-index: 500;
+  width: min(336px, calc(100vw - 32px));
+  border-radius: 16px; overflow: hidden;
+  background: #0c1330;
+  border: 1px solid rgba(147,197,253,.35);
+  box-shadow: 0 30px 70px rgba(5,6,15,.55), 0 0 60px rgba(37,99,235,.25);
+  opacity: 0; pointer-events: none; transform: translateY(30px) scale(.96);
+  transition: opacity .45s cubic-bezier(.22,1,.36,1), transform .45s cubic-bezier(.22,1,.36,1);
+}
+.ad-popup.show { opacity: 1; pointer-events: all; transform: translateY(0) scale(1); }
+.ad-popup-tag {
+  position: absolute; top: 12px; left: 12px; z-index: 4;
+  font-size: .58rem; letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.55); background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15); border-radius: 4px; padding: 3px 8px;
+}
+.ad-popup-close {
+  position: absolute; top: 10px; right: 10px; z-index: 5;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; font-size: 1rem; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; transition: .2s;
+}
+.ad-popup-close:hover { background: rgba(0,0,0,.7); transform: scale(1.08); }
+.ad-popup-visual {
+  position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden;
+  background: linear-gradient(160deg, #1a2456, #0c1330);
+}
+.ad-popup-visual img.ad-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: .85;
+}
+.ad-popup-visual::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(12,19,48,0) 35%, rgba(12,19,48,.96) 100%);
+}
+.ad-popup-avatar {
+  position: absolute; left: 16px; bottom: -30px; z-index: 3;
+  width: 68px; height: 68px; border-radius: 50%; overflow: hidden;
+  border: 3px solid #0c1330; box-shadow: 0 8px 20px rgba(0,0,0,.45);
+}
+.ad-popup-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.ad-popup-body { padding: 40px 18px 20px; text-align: left; }
+.ad-popup-eyebrow {
+  font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold3); opacity: .8; margin-bottom: 6px;
+}
+.ad-popup-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 1.08rem; line-height: 1.28; color: #fff; margin-bottom: 8px;
+}
+.ad-popup-title em { font-style: italic; color: #9db8ff; }
+.ad-popup-sub {
+  font-size: .8rem; line-height: 1.55; color: rgba(255,255,255,.62); margin-bottom: 16px;
+}
+.ad-popup-cta {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; background: var(--red); color: #fff;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: .82rem;
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 13px 16px; border: none; border-radius: 6px; cursor: pointer;
+  box-shadow: 0 10px 26px rgba(37,99,235,.4);
+  transition: .25s; animation: ctaGlow 2.6s ease-in-out infinite;
+}
+.ad-popup-cta:hover { background: var(--red2); transform: translateY(-2px); }
+
+/* FOOTER */
+/* FOOTER
+===================================================== */
+
+.site-footer{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(180deg,#FFFFFF 0%,#F5F9FD 100%);
+    color:var(--text);
+    font-family:'Outfit',sans-serif;
+    padding:0;
+}
+
+/* ==========================
+   TOP WAVE
+========================== */
+
+.dawn-horizon{
+    position:relative;
+    width:100%;
+    height:60px;
+    overflow:hidden;
+}
+
+.dawn-horizon svg{
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    width:100%;
+    height:auto;
+}
+
+.dawn-horizon .ripple{
+    animation:footerRise 4s ease-out;
+}
+
+@keyframes footerRise{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    .dawn-horizon .ripple{
+        animation:none;
+    }
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.footer-inner{
+    width:min(1200px,92%);
+    margin:auto;
+    padding:0 0 24px;
+}
+
+/* ==========================
+   TOP AREA
+========================== */
+
+.footer-top{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+    align-items:start;
+    padding-bottom:28px;
+    border-bottom:1px solid rgba(70, 77, 212, 0.08);
+}
+
+/* ==========================
+   BRAND
+========================== */
+
+.footer-brand h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(2rem,4vw,2.8rem);
+    line-height:1.1;
+    margin-bottom:18px;
+    color: var(--gold2);
+}
+
+.footer-brand h2 span{
+    display:block;
+    margin-top:8px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color: var(--gold2);
+}
+
+.footer-subtitle{
+    font-size:.9rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color: var(--gold2);
+}
+
+.footer-brand p{
+    margin:14px 0;
+    max-width:620px;
+    color:var(--text-m);
+    line-height:1.7;
+    font-size:1rem;
+}
+
+.footer-brand h4{
+    margin-bottom:8px;
+    font-size:1.25rem;
+    color: var(--gold2);
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.footer-links h5{
+    font-size:.82rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color: var(--gold2);
+    margin-bottom:24px;
+}
+
+.footer-links-grid{
+    display:grid;
+    grid-template-columns:repeat(2,140px);
+    gap:18px 28px;
+}
+
+.footer-links-grid a{
+    text-decoration:none;
+    color:var(--text-m);
+    transition:.3s;
+    font-size:1rem;
+}
+
+.footer-links-grid a:hover{
+    color:var(--blue);
+    transform:translateX(6px);
+}
+
+/* ==========================
+   COPYRIGHT
+========================== */
+
+.footer-bottom{
+    text-align:center;
+    padding:16px 0 6px;
+}
+
+.footer-bottom p{
+    margin:0;
+    color: var(--gold2);
+    font-size:.92rem;
+    line-height:1.8;
+}
+
+/* ==========================
+   FOOTER HEADING
+========================== */
+
+.footer-heading{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:10px;
+}
+
+.footer-heading img{
+    width:56px;
+    height:56px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.footer-heading h2{
+    margin:0;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+    .footer-top{
+        grid-template-columns:1fr;
+        gap:24px;
+        text-align:left;
+        padding-bottom:20px;
+    }
+
+    .footer-brand p{
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+    .footer-links{
+        display:flex;
+        flex-direction:column;
+        align-items:left;
+    }
+
+    .footer-links-grid{
+        grid-template-columns:repeat(2,40px);
+        text-align:left;
+        justify-content:left;
+        gap:14px 20px;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .footer-inner{
+        width:92%;
+        padding:0 0 16px;
+    }
+
+    .dawn-horizon{
+        height:44px;
+    }
+
+    .footer-links-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px 10px;
+        width:100%;
+        max-width:280px;
+    }
+
+    .footer-bottom{
+        padding:4px 0;
+    }
+
+    .footer-heading{
+        gap:10px;
+    }
+
+    .footer-heading img{
+        width:46px;
+        height:46px;
+    }
+
+}
+/* ============ IMAGE SYSTEM — plain <img> tags, just replace the src filename ============ */
+.img-ph {
+  display:block;
+  background: linear-gradient(135deg, rgba(103,232,249,.10), rgba(37,99,235,.06));
+  border: none;
+  border-radius: 16px;
+  color: var(--gold2);
+  font-size:.7rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  text-align:center;
+  object-fit:cover;
+}
+
+.img-ph-card { width:100%; aspect-ratio:4/3; border-radius:12px; margin-bottom:16px; }
+.img-ph-square { width:100%; aspect-ratio:1/1; }
+.img-ph-wide { width:100%; aspect-ratio:16/9; }
+.img-ph-tall { width:100%; aspect-ratio:3/4; }
+.img-ph-circle { border-radius:50%; flex:none; }
+
+/* DECORATIVE SCALLOP / DOTTED DIVIDER FOR PINTEREST FEEL */
+.scallop-divider {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  padding:6px 0 34px;
+}
+.scallop-divider span { width:6px; height:6px; border-radius:50%; background:var(--gold); opacity:.55; }
+.scallop-divider span:nth-child(2) { background:var(--red); width:8px; height:8px; opacity:.8; }
+
+/* REVEAL (base fade-up, used as fallback) */
+.reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* STAGGERED CASCADE REVEAL — each direct child animates in with an incremental delay */
+.stagger > * {
+  opacity:0; transform:translateY(26px) scale(.98);
+  transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1);
+}
+.stagger.visible > * { opacity:1; transform:translateY(0) scale(1); }
+.stagger.visible > *:nth-child(1)  { transition-delay:.02s; }
+.stagger.visible > *:nth-child(2)  { transition-delay:.08s; }
+.stagger.visible > *:nth-child(3)  { transition-delay:.14s; }
+.stagger.visible > *:nth-child(4)  { transition-delay:.20s; }
+.stagger.visible > *:nth-child(5)  { transition-delay:.26s; }
+.stagger.visible > *:nth-child(6)  { transition-delay:.32s; }
+.stagger.visible > *:nth-child(7)  { transition-delay:.38s; }
+.stagger.visible > *:nth-child(8)  { transition-delay:.44s; }
+.stagger.visible > *:nth-child(9)  { transition-delay:.50s; }
+.stagger.visible > *:nth-child(10) { transition-delay:.56s; }
+
+@media(max-width:640px) {
+  .stats-strip-inner { flex-wrap:wrap; }
+  .hero-stat { min-width:50%; border-bottom:1px solid var(--border-dark); border-right:none; padding-bottom:14px; margin-bottom:10px; }
+}
+@media(max-width:480px) {
+  .modal-top { padding:20px 20px 0; }
+  .modal-form { padding:18px 20px 24px; }
+  .modal-course-badge { margin:12px 20px 0; }
+  .field-row { grid-template-columns:1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+}
+@media (max-width:768px){
+
+    html,
+    body{
+        margin:0;
+        padding:0;
+        overflow-x:hidden;
+    }
+
+    section,
+    .hero,
+    .hero-content{
+        width:100%;
+        max-width:100%;
+        margin:0;
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .video-wrapper{
+        width:100%;
+        margin-top:40px;
+        border-radius:0;
+    }
+
+}
+
+
+/* FINAL SECTION KICKER SIZE OVERRIDE */
+.section-kicker {
+  font-family:'Bricolage Grotesque',sans-serif !important;
+  font-size:3rem !important;
+  font-style:italic !important;
+  font-weight:300 !important;
+  line-height:1 !important;
+}
+
+@media (max-width:768px) {
+  .section-kicker {
+    font-size:2rem !important;
+  }
+}
+
+</style>
+</head>
+<body class="no-cine-intro">
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="logo-centre.png" alt="Dr. Niraj Rawal logo" class="nav-logo">
+    <div class="nav-brand-text">
+      <strong>Dr. Niraj Rawal</strong>
+      <span>Inner Awakening</span>
+    </div>
+  </div>
+  <button class="nav-cta" type="button" onclick="openModal()">Start Your Journey Now</button>
+</nav>
+
+<!-- ONE-ON-ONE FLOATING SIDE BUTTON -->
+<button class="oneonone-fab" type="button" onclick="openOneOnOneModal()" aria-label="Book a 1-on-1 meeting">
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+  <span>1-on-1 Meeting</span>
+</button>
+
+<!-- ONE-ON-ONE AD POPUP -->
+<div class="ad-popup" id="oneOnOneAd">
+  <button class="ad-popup-close" type="button" onclick="closeOneOnOneAd()" aria-label="Close">&times;</button>
+  <div class="ad-popup-visual">
+    <img class="ad-bg" src="popup-meditation.png" alt="Inner Awakening">
+    <div class="ad-popup-avatar"><img src="popup-dr-rawal.png" alt="Dr. Niraj Rawal"></div>
+  </div>
+  <div class="ad-popup-body">
+    <div class="ad-popup-eyebrow">Private Session · Limited Slots</div>
+    <div class="ad-popup-title">Still Carrying Questions Only <em>Dr. Rawal</em> Can Answer?</div>
+    <div class="ad-popup-sub">Book a personal 1-on-1 session and get direct clarity on your inner journey, guided by Dr. Niraj Rawal himself.</div>
+    <button class="ad-popup-cta" type="button" onclick="handleAdCtaClick()">Talk to Dr Niraj Rawal Now</button>
+  </div>
+</div>
+
+<section class="hero">
+
+  <!-- Lotus watermark field -->
+  <div class="hero-lotus-bg" aria-hidden="true">
+    <svg class="lotus-mark" style="top:6%;left:3%;width:120px;height:120px;animation-delay:.2s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/><path d="M50 60 C40 50 38 35 45 20 C52 35 52 50 50 60Z"/><path d="M50 60 C60 50 62 35 55 20 C48 35 48 50 50 60Z"/></svg>
+    <svg class="lotus-mark" style="top:34%;left:12%;width:80px;height:80px;animation-delay:1.4s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/></svg>
+    <svg class="lotus-mark" style="top:62%;left:4%;width:100px;height:100px;animation-delay:.7s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/><path d="M50 60 C40 50 38 35 45 20 C52 35 52 50 50 60Z"/><path d="M50 60 C60 50 62 35 55 20 C48 35 48 50 50 60Z"/></svg>
+    <svg class="lotus-mark" style="top:10%;right:4%;width:110px;height:110px;animation-delay:1.9s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/><path d="M50 60 C40 50 38 35 45 20 C52 35 52 50 50 60Z"/><path d="M50 60 C60 50 62 35 55 20 C48 35 48 50 50 60Z"/></svg>
+    <svg class="lotus-mark" style="top:40%;right:8%;width:90px;height:90px;animation-delay:.4s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/></svg>
+    <svg class="lotus-mark" style="top:66%;right:2%;width:120px;height:120px;animation-delay:2.2s;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/><path d="M50 60 C40 50 38 35 45 20 C52 35 52 50 50 60Z"/><path d="M50 60 C60 50 62 35 55 20 C48 35 48 50 50 60Z"/></svg>
+  </div>
+
+  <div class="hero-inner">
+
+    <div class="hero-top-badge">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 60 C30 55 20 40 22 22 C38 26 48 38 50 55 C52 38 62 26 78 22 C80 40 70 55 50 60Z"/><path d="M50 60 C40 50 38 35 45 20 C52 35 52 50 50 60Z"/><path d="M50 60 C60 50 62 35 55 20 C48 35 48 50 50 60Z"/></svg>
+    </div>
+
+    <div class="hero-eyebrow">
+      Awaken Within. Transform Your Life.
+    </div>
+
+    <h1>
+        Inner
+        <span class="em-gold">Awakening</span>
+        <span class="hero-title-sub">Programme 2.0</span>
+    </h1>
+
+    <div class="hero-title-orn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L15 12 L12 22 L9 12 Z"/></svg>
+    </div>
+
+    <p class="hero-hook">
+        <span class="line-a">Discover the Root Within.</span>
+        <span class="line-b">Awaken Your True Self.</span>
+    </p>
+
+    <!-- BOXED VIDEO CARD -->
+    <div class="hero-video-wrap">
+
+        <div class="hero-video-card" id="movieSection">
+
+            <div class="movie-frame" id="vslPlayer">
+
+                <video class="vsl-video"
+                    id="vslVideo"
+                    poster="tree.png"
+                    preload="metadata"
+                    playsinline
+                    webkit-playsinline="true"
+                    x5-playsinline="true"
+                    x-webkit-airplay="allow"
+                    controlsList="nodownload"
+                    disablePictureInPicture>
+
+                    <source src="videovsl.mp4" type="video/mp4">
+
+                </video>
+
+                <div class="vsl-video-scrim"></div>
+
+                
+
+                <button class="vsl-play-btn"
+                    id="vslPlayBtn"
+                    type="button"
+                    aria-label="Play video"
+                    onclick="playVSL()">
+
+                    <svg viewBox="0 0 92 92" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="vsl-ring" cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/>
+                        <circle class="vsl-fill" cx="46" cy="46" r="38" fill="var(--red)"/>
+                        <path d="M37 27 L64 46 L37 65 Z" fill="#fff"/>
+                    </svg>
+
+                </button>
+
+                <div class="hero-video-controls-decor" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                  <span class="vcd-time">0:00 / 28:46</span>
+                  <div class="vcd-bar"><div class="vcd-bar-fill"></div></div>
+                  <div class="vcd-icons">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M8 21H5a2 2 0 01-2-2v-3M16 21h3a2 2 0 002-2v-3"/></svg>
+                  </div>
+                </div>
+
+                <div class="movie-play-hint" id="moviePlayHint">
+                    Tap to Play
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRESENTER CREDIT -->
+    <div class="hero-presenter">
+      <h3>Dr. Niraj Rawal</h3>
+      <div class="hero-presenter-role">India's Most Trusted Expert in Spiritual Psychology, Neuroscience & Inner Awakening</div>
+    </div>
+
+    <!-- HERO EVENT-DETAILS CARDS: Date / Time / Duration / Language -->
+    <div class="hero-info-grid">
+
+        <div class="hero-info-card">
+            <div class="hero-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+            </div>
+            <div class="hero-info-content">
+                <span>Date</span>
+                <h4 id="event-date">Loading&hellip;</h4>
+            </div>
+        </div>
+
+        <div class="hero-info-card">
+            <div class="hero-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </div>
+            <div class="hero-info-content">
+                <span>Time</span>
+                <h4 id="event-time">Loading&hellip;</h4>
+            </div>
+        </div>
+
+        <div class="hero-info-card">
+            <div class="hero-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12M6 22h12M6 2c0 5 6 6 6 10s-6 5-6 10M18 2c0 5-6 6-6 10s6 5 6 10"/></svg>
+            </div>
+            <div class="hero-info-content">
+                <span>Duration</span>
+                <h4 id="event-duration">Loading&hellip;</h4>
+            </div>
+        </div>
+
+        <div class="hero-info-card">
+            <div class="hero-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/></svg>
+            </div>
+            <div class="hero-info-content">
+                <span>Language</span>
+                <h4 id="event-language">Loading&hellip;</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+
+    <button
+        class="hero-cta-btn"
+        type="button"
+        onclick="openModal()">
+
+        Start Your Journey Now
+
+    </button>
+
+
+</div>
+</section>
+ 
+
+<!-- CORE TRUTH -->
+<section class="section reveal truth-section">
+  <svg class="section-curves" viewBox="0 0 1000 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="truthCurve" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#67e8f9" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#93c5fd" stop-opacity=".4"/>
+        <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M-40,60 C 220,-20 340,180 620,90 S 980,40 1040,140" fill="none" stroke="url(#truthCurve)" stroke-width="1.6"/>
+    <path d="M-40,640 C 260,720 420,540 700,620 S 980,560 1040,660" fill="none" stroke="url(#truthCurve)" stroke-width="1.2"/>
+  </svg>
+  <div class="section-kicker"><br>The Root Cause</div>
+  <h2 class="section-title">Here Is What <em>Nobody Told You</em></h2>
+  
+  <div class="truth-body">
+    <p>Between the ages of 0 and 7, your mind was absorbing everything around it with almost no filter. Every moment of feeling unseen, unsafe, or unheard did not just pass through you and disappear.</p>
+  </div>
+  <p class="truth-highlight" id="truthHighlight">It became your programming, and that programming is still quietly running your adult decisions today.</p>
+  <div class="truth-body">
+    <p>This is why willpower alone does not stick. This is why you can know exactly what to do and still not do it. The conscious mind is rarely the one driving. The old patterns underneath are. Until those patterns are addressed at the root, you are updating the surface while the same operating system keeps running underneath.</p> <p>The Inner Awakening Programme 2.0 was built by Dr. Niraj Rawal to work exactly at this level: <b>not just changing what you think, but gently releasing what you have been carrying since childhood.</b></p></div>
+</section>
+
+<!-- CTA BLOCK 1 -->
+<section class="cta-block reveal">
+  <button class="btn-enroll" type="button" onclick="openModal()">
+    Start Your Journey Now
+    <span class="btn-enroll-arrow">&rarr;</span>
+  </button>
+  </section>
+
+
+
+<!-- WHAT YOU WILL LEARN -->
+<section class="section" style="max-width:1200px;margin:0 auto;">
+  <section id="learn" class="section"></section>
+
+  <div class="section-kicker">Inside the Programme</div>
+
+  <h2 class="section-title">
+    What You Will <em>Learn and Transform</em>
+  </h2>
+
+  <div class="learn-grid">
+
+    <div class="learn-card">
+      <img src="healing-visual.jpg" alt="Healing Visual" class="img-ph img-ph-card">
+      <h3>Heal Emotional Pain</h3>
+      <p>Release deep seated patterns and wounds that have held you back for years, gently and permanently, using guided processes Dr. Rawal has refined over thousands of sessions.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="inner-power-visual.jpg" alt="Inner Power Visual" class="img-ph img-ph-card">
+      <h3>Awaken Inner Power</h3>
+      <p>Reconnect with your true self and the limitless potential that has always lived within you, even if it has felt buried under years of pressure and expectation.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="subconscious-visual.jpg" alt="Subconscious Visual" class="img-ph img-ph-card">
+      <h3>Reprogram the Subconscious</h3>
+      <p>Overwrite limiting beliefs with empowering, life changing ones using proven neuroscience techniques explained simply, with no jargon and no confusion.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="alignment-visual.jpg" alt="Alignment Visual" class="img-ph img-ph-card">
+      <h3>Align Mind, Body and Soul</h3>
+      <p>Create true harmony across every dimension of your being so life flows with ease and grace, instead of feeling like a constant uphill battle.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="meditation-visual.jpg" alt="Meditation Visual" class="img-ph img-ph-card">
+      <h3>Guided Meditation Practices</h3>
+      <p>Proven techniques to calm the mind, reduce anxiety, and access deeper awareness every single day, taught in a way you can actually sustain.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="routine-visual.jpg" alt="Routine Visual" class="img-ph img-ph-card">
+      <h3>Daily Practice Blueprint</h3>
+      <p>A complete take home routine to sustain your transformation long after the programme ends, so the change does not fade once the sessions are over.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="family-visual.jpg" alt="Family Visual" class="img-ph img-ph-card">
+      <h3>Break Generational Patterns</h3>
+      <p>Understand how inherited beliefs from your family and upbringing quietly shape your choices today, and learn how to consciously rewrite them.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="self-worth-visual.jpg" alt="Self Worth Visual" class="img-ph img-ph-card">
+      <h3>Build Unshakable Self Worth</h3>
+      <p>Move from constantly seeking approval to trusting your own voice, your own decisions, and your own worth, without needing anyone else to confirm it.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="astral.jpg" alt="Astral Body Visual" class="img-ph img-ph-card">
+      <h3>Reprogram Your Astral Body</h3>
+      <p>Work at the subtle energetic level beyond the physical, clearing blockages in your astral body so healing reaches far deeper than the conscious mind alone.</p>
+    </div>
+
+    <div class="learn-card">
+      <img src="patterns.jpg" alt="Install Desired Pattern Visual" class="img-ph img-ph-card">
+      <h3>Install Your Desired Patterns</h3>
+      <p>Consciously choose and embed the new beliefs, habits, and responses you actually want, replacing the old programming with patterns that serve the life you are building.</p>
+    </div>
+
+  </div> <!-- End .learn-grid -->
+
+  <div class="section-cta">
+    <button class="btn-enroll" type="button" onclick="openModal()">
+      Begin Your Journey Today
+      <span class="btn-enroll-arrow">&rarr;</span>
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ABOUT DR. RAWAL -->
+<section class="section reveal" style="padding-top:10px;padding-bottom:20px;">
+  <section id="about" class="section reveal"></section>
+  <div class="about-grid">
+    <div style="position:relative;">
+      <div class="pic-zone">
+        <img src="dr-niraj.png" alt="Dr. Niraj Rawal" class="pic-photo-img">
+      </div>
+    </div>
+<div>
+  <div class="section-kicker">Meet Dr. Niraj Rawal</div>
+
+  <h2 class="section-title">
+    India's Most Trusted Expert in <em>Spiritual Psychology, Neuroscience & Inner Awakening</em>
+  </h2>
+
+  <p style="font-size:.96rem;color:var(--text-m);line-height:1.82;margin-bottom:18px;">
+    With over <strong>15,870+ lives transformed since 2011</strong>, Dr. Niraj Rawal is a leading expert in emotional healing, spiritual growth, and subconscious transformation. By combining ancient wisdom with modern neuroscience, subconscious reprogramming, chakra science, DNA activation, sound therapy, and the Law of Attraction, he has helped thousands create lasting change. He has also worked with renowned Bollywood and Tollywood celebrities, guiding them on their personal journeys of healing, clarity, and transformation.
+  </p>
+
+  <p style="font-size:.96rem;color:var(--text-m);line-height:1.82;margin-bottom:18px;">
+    As a Child Psychologist, CBT Therapist, Neuroscience Coach, Spiritual Coach, Meditation Trainer, Third Eye and Seven Chakra Expert, DNA Healer, and Energy Healer, Dr. Rawal brings together science and spirituality through a practical, results-driven approach. His workshops and programmes have empowered people across India and internationally to overcome emotional blocks, limiting beliefs, and stress while discovering their true potential.
+  </p>
+
+  <p style="font-size:.96rem;color:var(--text-m);line-height:1.82;margin-bottom:0;">
+    The <strong>Inner Awakening Programme 2.0</strong> is his most comprehensive transformational experience, created for those seeking emotional freedom, inner peace, confidence, abundance, and a deeper connection with themselves. Every session is designed with one purpose: helping you create real, measurable, and lasting transformation from within.
+  </p>
+</div>
+      <div class="about-stats">
+        <div>
+          <div class="about-stat-val" data-count="15000" data-suffix="+">0</div>
+          <div class="about-stat-label">Lives transformed</div>
+        </div>
+         <div>
+    <div class="about-stat-val" data-count="15" data-suffix="+">0</div>
+    <div class="about-stat-label">Years of Experience</div>
+  </div>
+ <div>
+    <div class="about-stat-val" data-suffix="">4.9</div>
+    <div class="about-stat-label">Rating</div>
+</div>
+    </div>
+    <div class="section-cta">
+    <button class="btn-enroll" type="button" onclick="openModal()">
+      Begin Your Journey Today
+      <span class="btn-enroll-arrow">&rarr;</span>
+    </button>
+  </div>
+  </div>
+</section>
+
+
+<!-- WHO IS THIS FOR -->
+<section class="section" style="max-width:1200px;margin:0 auto;">
+
+  <div class="section-kicker">Is This For You?</div>
+
+  <h2 class="section-title">
+    This Programme Is For You <em>If...</em>
+  </h2>
+
+  <div class="who-grid">
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You feel mentally restless and want lasting, genuine calm in your daily life.
+    </div>
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You are stuck in the same patterns and want real, lasting change that goes deep.
+    </div>
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You want to understand the root cause of your struggles and heal from within.
+    </div>
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You are curious about consciousness and the science of inner awakening.
+    </div>
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You feel a deep calling toward a more meaningful and purposeful life.
+    </div>
+
+    <div class="who-item reveal">
+      <div class="who-check">&#10003;</div>
+      You want a practical, guided path and not just theory or empty motivation.
+    </div>
+
+  </div>
+
+  <div class="section-cta">
+    <button class="btn-enroll" type="button" onclick="openModal()">
+      Start Your Journey Now
+      <span class="btn-enroll-arrow">&rarr;</span>
+    </button>
+  </div>
+
+</section>
+
+
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="section reveal" style="max-width:1200px;margin:0 auto;">
+  <section id="testimonials" class="section reveal"></section>
+  
+  <div class="section-kicker">Success Stories</div>
+  <h2 class="section-title">What <em>Participants</em> Say</h2>
+  <div class="vtesti-wrap">
+  <div class="vtesti-track" id="vtestiTrack">
+
+    <div class="vtesti-card" data-idx="0">
+      <video src="testimonial-video-1.mp4" playsinline preload="metadata" poster="man3.png"></video>
+      <div class="vtesti-scrim"></div>
+      <div class="vtesti-topbar">
+        <img class="vtesti-avatar" src="logo-centre.png" alt="">
+        <div class="vtesti-title">
+          <div class="t1">Komal Verma</div>
+          <div class="t2">Delhi</div>
+        </div>
+      </div>
+      <svg class="vtesti-play" viewBox="0 0 92 92"><circle cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/><circle cx="46" cy="46" r="38" fill="var(--red)"/><path d="M37 27 L64 46 L37 65 Z" fill="#fff"/></svg>
+    </div>
+
+    <div class="vtesti-card" data-idx="1">
+      <video src="testimonial-video-2.mp4" playsinline preload="metadata" poster="man4.png"></video>
+      <div class="vtesti-scrim"></div>
+      <div class="vtesti-topbar">
+        <img class="vtesti-avatar" src="logo-centre.png" alt="">
+        <div class="vtesti-title">
+          <div class="t1">Rajendra Singh</div>
+          <div class="t2">Noida</div>
+        </div>
+      </div>
+      <svg class="vtesti-play" viewBox="0 0 92 92"><circle cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/><circle cx="46" cy="46" r="38" fill="var(--red)"/><path d="M37 27 L64 46 L37 65 Z" fill="#fff"/></svg>
+    </div>
+
+    <div class="vtesti-card" data-idx="2">
+      <video src="testimonial-video-3.mp4" playsinline preload="metadata" poster="man2.png"></video>
+      <div class="vtesti-scrim"></div>
+      <div class="vtesti-topbar">
+        <img class="vtesti-avatar" src="logo-centre.png" alt="">
+        <div class="vtesti-title">
+          <div class="t1">Arpit Gupta</div>
+          <div class="t2">Kanpur</div>
+        </div>
+      </div>
+      <svg class="vtesti-play" viewBox="0 0 92 92"><circle cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/><circle cx="46" cy="46" r="38" fill="var(--red)"/><path d="M37 27 L64 46 L37 65 Z" fill="#fff"/></svg>
+    </div>
+
+    <div class="vtesti-card" data-idx="3">
+      <video src="testimonial-video-4.mp4" playsinline preload="metadata" poster="man1.png"></video>
+      <div class="vtesti-scrim"></div>
+      <div class="vtesti-topbar">
+        <img class="vtesti-avatar" src="logo-centre.png" alt="">
+        <div class="vtesti-title">
+          <div class="t1">Priyam Srivastav</div>
+          <div class="t2">Lucknow</div>
+        </div>
+      </div>
+      <svg class="vtesti-play" viewBox="0 0 92 92"><circle cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/><circle cx="46" cy="46" r="38" fill="var(--red)"/><path d="M37 27 L64 46 L37 65 Z" fill="#fff"/></svg>
+    </div>
+
+    <div class="vtesti-card" data-idx="4">
+      <video src="testimonial-video-5.mp4" playsinline preload="metadata" poster="man5.png"></video>
+      <div class="vtesti-scrim"></div>
+      <div class="vtesti-topbar">
+        <img class="vtesti-avatar" src="logo-centre.png" alt="">
+        <div class="vtesti-title">
+          <div class="t1">Yashpal Maane</div>
+          <div class="t2">Mumbai</div>
+        </div>
+      </div>
+      <svg class="vtesti-play" viewBox="0 0 92 92"><circle cx="46" cy="46" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/><circle cx="46" cy="46" r="38" fill="var(--red)"/><path d="M37 27 L64 46 L37 65 Z" fill="#fff"/></svg>
+    </div>
+
+  </div>
+  <div class="vtesti-nav">
+    <button class="vtesti-arrow" type="button" id="vtestiPrev" aria-label="Previous">&#8592;</button>
+    <button class="vtesti-arrow" type="button" id="vtestiNext" aria-label="Next">&#8594;</button>
+  </div>
+</div>
+  <div class="testi-carousel">
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-priya-sharma.jpg" alt="Priya Sharma" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;The Inner Awakening Programme completely changed how I see myself. More clarity and peace than I ever thought possible.&rdquo;</p>
+        <div class="testi-who">Priya Sharma &nbsp; Jaipur</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-suresh-agarwal.jpg" alt="Suresh Agarwal" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;Within two weeks my relationship with my family transformed. I feel calmer, more loving, and more present every day.&rdquo;</p>
+        <div class="testi-who">Suresh Agarwal &nbsp; Sikar</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-anita-gupta.jpg" alt="Anita Gupta" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;I had been struggling with anxiety for years. This programme helped me release blocks I did not even know I was carrying.&rdquo;</p>
+        <div class="testi-who">Anita Gupta &nbsp; Mumbai</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-rahul-verma.jpg" alt="Rahul Verma" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;Dr. Rawal explains everything so simply and practically. I use the daily routine every single morning now without fail.&rdquo;</p>
+        <div class="testi-who">Rahul Verma &nbsp; Delhi</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-kavita-joshi.jpg" alt="Kavita Joshi" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;I joined feeling skeptical and left in tears of relief. Something I had carried for fifteen years finally felt lighter.&rdquo;</p>
+        <div class="testi-who">Kavita Joshi &nbsp; Udaipur</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar-row"><img src="testimonial-meenal-shah.jpg" alt="Meenal Shah" class="img-ph img-ph-circle testi-avatar"></div>
+        <p>&ldquo;My husband noticed the change before I even told him I was doing this programme. That alone told me it was real.&rdquo;</p>
+        <div class="testi-who">Meenal Shah &nbsp; Pune</div>
+      </div>
+    </div>
+    <div class="testi-nav">
+      <button class="testi-arrow" type="button" id="testiPrev" aria-label="Previous">&#8592;</button>
+      <button class="testi-arrow" type="button" id="testiNext" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section reveal" style="max-width:900px;margin:0 auto;">
+  <section id="faq" class="section reveal"></section>
+  <div class="section-kicker">Good to Know</div>
+  <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" type="button">Is this course live or recorded? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>You get Live sessions run on scheduled dates.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">Is this only for people who have been through trauma? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>No. Every person carries some early conditioning. If you have ever felt stuck in patterns you could not explain, this programme will show you where they started and how to work with them. You do not need extreme trauma to benefit.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">What language is this programme taught in? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>The programme is taught in Hindi, making it fully accessible to participants across India.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">Do I need any prior experience? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>Not at all. This programme is designed for beginners and experienced practitioners alike. Everything is guided step by step from the very beginning.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">How do I receive joining details after payment? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>After enrollment and payment confirmation, the joining link and schedule are sent directly to your WhatsApp and email within a few hours.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button">Is this a substitute for medical treatment? <span class="faq-plus">+</span></button>
+      <div class="faq-a"><p>No. This is a coaching and personal growth programme. It is not medical or psychological treatment. For health concerns, please consult a qualified professional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal">
+  <div class="final-cta-bg"></div>
+  <svg class="section-curves" viewBox="0 0 1000 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="finalCurve" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2563eb" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#67e8f9" stop-opacity=".45"/>
+        <stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M-40,420 C 220,340 380,480 640,380 S 960,300 1040,360" fill="none" stroke="url(#finalCurve)" stroke-width="1.6"/>
+  </svg>
+  <div class="final-cta-inner">
+    <h2>Your Journey<br><em>Begins Within</em></h2>
+    <p>Take the first step toward the life you were meant to live. Join over 15,000 people who have already transformed with Dr. Niraj Rawal.</p>
+    <button class="btn-enroll" type="button" onclick="openModal()">
+      Start Your Journey Now
+      <span class="btn-enroll-arrow">&rarr;</span>
+    </button>
+   
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <!-- Top Wave -->
+    <div class="dawn-horizon" aria-hidden="true">
+        <svg viewBox="0 0 1100 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="skyFade" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#EAF3FA" stop-opacity="0"/>
+                    <stop offset="100%" stop-color="#2F76AC" stop-opacity="0.14"/>
+                </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="1100" height="120" fill="url(#skyFade)"/>
+
+            <path class="ripple"
+                  d="M0,95 Q150,75 300,90 T600,88 T900,92 T1100,85"
+                  stroke="#7FB4DD"
+                  stroke-width="1.4"
+                  fill="none"
+                  opacity=".7"/>
+
+            <path class="ripple"
+                  d="M0,110 Q275,85 550,102 T1100,100"
+                  stroke="#2F76AC"
+                  stroke-width=".6"
+                  fill="none"
+                  opacity=".35"/>
+        </svg>
+    </div>
+
+    <div class="footer-inner">
+
+        <div class="footer-top">
+
+            <!-- Left -->
+            <div class="footer-brand">
+
+                <div class="footer-heading">
+
+                    <img src="logo-centre.png" alt="Inner Awakening Logo">
+
+                    <h2>
+                        Inner Awakening
+                        <span>Programme 2.0</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    A complete journey of healing, subconscious transformation,
+                    meditation, neuroscience and spiritual awakening designed to
+                    help you reconnect with your highest self.
+                </p>
+
+                <h4>Guided by Dr. Niraj Rawal</h4>
+
+              
+
+            </div>
+
+            <!-- Right -->
+            <div class="footer-links">
+
+                <h5>Explore</h5>
+
+                <div class="footer-links-grid">
+
+                    <a href="#hero">Home</a>
+
+                    <a href="#about">About</a>
+
+                    <a href="#learn">Programme</a>
+
+                    <a href="#testimonials">Testimonials</a>
+
+                    <a href="#faq">FAQs</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+
+            <p>© 2026 Inner Awakening Programme. All Rights Reserved.</p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ENROLLMENT MODAL -->
+<div class="overlay" id="enrollOverlay">
+  <div class="modal">
+    <div class="modal-top">
+      <div>
+        <div class="modal-title">Complete Your Registration</div>
+        <div class="modal-sub">Fill in your details to proceed to secure payment</div>
+      </div>
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-course-badge">
+      <div class="modal-course-name">Inner Awakening Programme 2.0</div>
+    </div>
+    <form class="modal-form" id="enrollForm">
+      <input type="hidden" name="course"   value="Inner Awakening Programme 2.0">
+      <input type="hidden" name="_subject" value="New Enrollment: Inner Awakening Programme 2.0">
+      <div class="field-row">
+        <div class="field">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="first_name" placeholder="Rahul" required>
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="last_name" placeholder="Sharma" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="whatsapp">WhatsApp Number *</label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+91 98765 43210" required pattern="[0-9+\s\-]{10,15}">
+      </div>
+      <div class="field">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="rahul@email.com" required>
+      </div>
+      <div class="field">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Jaipur">
+      </div>
+      <div class="field">
+        <label for="source">How did you hear about us?</label>
+        <select id="source" name="source">
+          <option value="">Select an option</option>
+          <option>Facebook</option>
+          <option>WhatsApp</option>
+          <option>Friend or Family</option>
+          <option>YouTube</option>
+          <option>Instagram</option>
+          <option>Google Search</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="paymentMethod">Choose Payment Method *</label>
+        <select name="payment_method" id="paymentMethod" required onchange="updatePaymentBtn()">
+          <option value="">Select payment option</option>
+          <option value="razorpay">Pay Online via Razorpay (UPI / Card / NetBanking)</option>
+          <option value="whatsapp">Pay via WhatsApp Assistance</option>
+          <option value="bank">Direct Bank Transfer</option>
+        </select>
+      </div>
+      <button type="submit" class="modal-submit" id="enrollSubmit">
+        Proceed to Payment &rarr;
+      </button>
+      <p class="modal-note">
+        By registering you agree to our <a href="#">Terms of Use</a>.<br>
+        Your details are safe and will never be shared with anyone.
+      </p>
+    </form>
+    <div class="modal-success" id="enrollSuccess">
+      <h3>Registration Successful!</h3>
+      <p>Thank you! Your details have been received. You are being redirected to the payment page now.</p>
+      <p class="redirect-note">Redirecting in <span id="redirectCount">3</span> seconds&hellip;</p>
+    </div>
+  </div>
+</div>
+
+<!-- ONE-ON-ONE MEETING MODAL -->
+<div class="overlay" id="oneOnOneOverlay">
+  <div class="modal">
+    <div class="modal-top">
+      <div>
+        <div class="modal-title">Book a 1-on-1 Meeting</div>
+        <div class="modal-sub">A private session with Dr. Niraj Rawal, tailored to you</div>
+      </div>
+      <button class="modal-close" type="button" onclick="closeOneOnOneModal()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-course-badge">
+      <div class="modal-course-name">1-on-1 Session with Dr. Niraj Rawal</div>
+    </div>
+    <form class="modal-form" id="oneOnOneForm">
+      <input type="hidden" name="course"   value="1-on-1 Meeting with Dr. Niraj Rawal">
+      <input type="hidden" name="_subject" value="New 1-on-1 Meeting Request">
+      <div class="field-row">
+        <div class="field">
+          <label for="ooFirstName">First Name *</label>
+          <input type="text" id="ooFirstName" name="first_name" placeholder="Rahul" required>
+        </div>
+        <div class="field">
+          <label for="ooLastName">Last Name *</label>
+          <input type="text" id="ooLastName" name="last_name" placeholder="Sharma" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ooWhatsapp">WhatsApp Number *</label>
+        <input type="tel" id="ooWhatsapp" name="whatsapp" placeholder="+91 98765 43210" required pattern="[0-9+\s\-]{10,15}">
+      </div>
+      <div class="field">
+        <label for="ooEmail">Email Address *</label>
+        <input type="email" id="ooEmail" name="email" placeholder="rahul@email.com" required>
+      </div>
+      <div class="field">
+        <label for="ooDate">Preferred Date</label>
+        <input type="date" id="ooDate" name="preferred_date">
+      </div>
+      <div class="field">
+        <label for="ooSlot">Preferred Time Slot</label>
+        <select id="ooSlot" name="preferred_slot">
+          <option value="">Select an option</option>
+          <option>Morning (9AM - 12PM)</option>
+          <option>Afternoon (12PM - 4PM)</option>
+          <option>Evening (4PM - 8PM)</option>
+        </select>
+      </div>
+      <button type="submit" class="modal-submit" id="oneOnOneSubmit">
+        Book Session &amp; Proceed to Payment &rarr;
+      </button>
+      <p class="modal-note">
+        By booking you agree to our <a href="#">Terms of Use</a>.<br>
+        Your details are safe and will never be shared with anyone.
+      </p>
+    </form>
+    <div class="modal-success" id="oneOnOneSuccess">
+      <h3>Request Received!</h3>
+      <p>Thank you! Your 1-on-1 request has been received. You are being redirected to the payment page now.</p>
+      <p class="redirect-note">Redirecting in <span id="oneOnOneRedirectCount">3</span> seconds&hellip;</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* VSL VIDEO PLAYER */
+function playVSL() {
+  const frame = document.getElementById('vslPlayer');
+  const video = document.getElementById('vslVideo');
+  if (!frame || !video) return;
+  frame.classList.add('playing');
+  video.setAttribute('controls', '');
+  video.muted = false;
+  const attempt = video.play();
+  if (attempt && attempt.catch) {
+    attempt.catch(() => {
+      // Some mobile browsers still block unmuted playback even on a direct
+      // tap. Retry muted (always allowed), then unmute a beat later so the
+      // video actually starts instead of silently doing nothing.
+      video.muted = true;
+      video.play().then(() => {
+        setTimeout(() => { video.muted = false; }, 300);
+      }).catch(() => { /* give up silently; controls stay visible so the visitor can press play themselves */ });
+    });
+  }
+}
+(function() {
+  const frame = document.getElementById('vslPlayer');
+  const video = document.getElementById('vslVideo');
+  const btn = document.getElementById('vslPlayBtn');
+  if (!frame || !video) return;
+  // Some mobile browsers fire touch events with a delay/ghost-click that can
+  // occasionally get swallowed; binding touchend as well as the existing
+  // onclick makes the first tap reliably start playback.
+  if (btn) {
+    btn.addEventListener('touchend', (e) => { e.preventDefault(); playVSL(); }, { passive:false });
+  }
+  // if the visitor pauses back at the very start, restore the cover + play button
+  video.addEventListener('pause', () => {
+    if (video.currentTime === 0) frame.classList.remove('playing');
+  });
+  video.addEventListener('ended', () => {
+    frame.classList.remove('playing');
+    video.removeAttribute('controls');
+    video.currentTime = 0;
+  });
+})();
+
+/* MODAL */
+const overlay = document.getElementById('enrollOverlay');
+function openModal() { overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal() { overlay.classList.remove('open'); document.body.style.overflow=''; }
+overlay.addEventListener('click', e => { if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+/* ONE-ON-ONE MEETING MODAL */
+const oneOnOneOverlay = document.getElementById('oneOnOneOverlay');
+function openOneOnOneModal() {
+  closeOneOnOneAd();
+  oneOnOneOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeOneOnOneModal() {
+  oneOnOneOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+oneOnOneOverlay.addEventListener('click', e => { if (e.target === oneOnOneOverlay) closeOneOnOneModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOneOnOneModal(); });
+
+/* ONE-ON-ONE AD POPUP — appears once, 7 seconds after page load */
+const oneOnOneAd = document.getElementById('oneOnOneAd');
+function closeOneOnOneAd() {
+  oneOnOneAd.classList.remove('show');
+}
+function handleAdCtaClick() {
+  openOneOnOneModal();
+}
+window.addEventListener('DOMContentLoaded', function () {
+  const alreadyShown = sessionStorage.getItem('oneOnOneAdShown');
+  if (alreadyShown) return;
+  setTimeout(function () {
+    const anyModalOpen = document.querySelector('.overlay.open');
+    if (!anyModalOpen) {
+      oneOnOneAd.classList.add('show');
+      sessionStorage.setItem('oneOnOneAdShown', '1');
+    }
+  }, 7000);
+});
+function updatePaymentBtn() {
+  const sel = document.getElementById('paymentMethod').value;
+  const btn = document.getElementById('enrollSubmit');
+  if (sel==='whatsapp') btn.textContent = 'Continue to WhatsApp \u2192';
+  else if (sel==='bank') btn.textContent = 'Get Bank Details \u2192';
+  else btn.textContent = 'Proceed to Payment \u2192';
+}
+
+/* REPLACE THESE WITH YOUR REAL LINKS */
+const PAYMENT = {
+  razorpay: 'https://razorpay.me/your-inner-awakening-link',
+  whatsapp: 'https://wa.me/919352080871?text=I%20want%20to%20pay%20for%20Inner%20Awakening%20Programme%202.0',
+  bank:     'https://wa.me/919352080871?text=Please%20share%20bank%20details%20for%20Inner%20Awakening',
+};
+const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+
+document.getElementById('enrollForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('enrollSubmit');
+  const payMethod = document.getElementById('paymentMethod').value;
+  if (!payMethod) { alert('Please select a payment method to continue.'); return; }
+  btn.textContent = 'Submitting\u2026';
+  btn.disabled = true;
+  const data = new FormData(this);
+  try {
+    if (FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+    }
+    this.classList.add('hide');
+    document.getElementById('enrollSuccess').classList.add('show');
+    let count = 3;
+    const interval = setInterval(() => {
+      count--;
+      document.getElementById('redirectCount').textContent = count;
+      if (count <= 0) { clearInterval(interval); window.open(PAYMENT[payMethod]||PAYMENT.whatsapp,'_blank'); closeModal(); }
+    }, 1000);
+  } catch {
+    window.open(PAYMENT[payMethod]||PAYMENT.whatsapp,'_blank');
+    closeModal();
+  }
+});
+
+/* ONE-ON-ONE MEETING FORM — collects details, then redirects to payment.
+   Replace this URL with your real 1-on-1 payment link (Razorpay page,
+   payment gateway link, etc). */
+const ONE_ON_ONE_PAYMENT_URL = 'https://razorpay.me/your-one-on-one-link';
+
+document.getElementById('oneOnOneForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const btn = document.getElementById('oneOnOneSubmit');
+  btn.textContent = 'Submitting\u2026';
+  btn.disabled = true;
+  const data = new FormData(this);
+  try {
+    if (FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    }
+    this.classList.add('hide');
+    document.getElementById('oneOnOneSuccess').classList.add('show');
+    let count = 3;
+    const interval = setInterval(() => {
+      count--;
+      document.getElementById('oneOnOneRedirectCount').textContent = count;
+      if (count <= 0) {
+        clearInterval(interval);
+        window.open(ONE_ON_ONE_PAYMENT_URL, '_blank');
+        closeOneOnOneModal();
+      }
+    }, 1000);
+  } catch {
+    window.open(ONE_ON_ONE_PAYMENT_URL, '_blank');
+    closeOneOnOneModal();
+  }
+});
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const ans  = item.querySelector('.faq-a');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!open) { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+  });
+});
+
+/* SCROLL REVEAL (base sections, including full-screen movie section) */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold:0, rootMargin:'0px 0px -10% 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* LEARN CARDS SCROLL POP-UP */
+
+const learnCards = document.querySelectorAll(".learn-card");
+
+const learnObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+            learnObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+learnCards.forEach(card=>learnObserver.observe(card));
+
+
+
+/* CORE TRUTH — word-by-word text reveal */
+(function() {
+  const el = document.getElementById('truthHighlight');
+  if (!el) return;
+  const words = el.textContent.trim().split(/\s+/);
+  el.innerHTML = words.map(w => `<span class="w">${w}</span>`).join(' ');
+  const spans = el.querySelectorAll('.w');
+  const truthObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        spans.forEach((s, i) => setTimeout(() => s.classList.add('lit'), i * 55));
+        truthObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold:0.5 });
+  truthObserver.observe(el);
+})();
+
+/* COUNT-UP STAT ANIMATION */
+(function() {
+  const counters = document.querySelectorAll('[data-count]');
+  const countObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseFloat(el.getAttribute('data-count'));
+      const suffix = el.getAttribute('data-suffix') || '';
+      const decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+      const duration = 1400;
+      const start = performance.now();
+      function frame(now) {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = target * eased;
+        el.innerHTML = (decimals ? val.toFixed(decimals) : Math.round(val).toLocaleString('en-IN')) + suffix;
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+      countObserver.unobserve(el);
+    });
+  }, { threshold:0.6 });
+  counters.forEach(el => countObserver.observe(el));
+})();
+
+/* TESTIMONIAL CAROUSEL CONTROLS */
+(function() {
+  const track = document.getElementById('testiTrack');
+  const prev = document.getElementById('testiPrev');
+  const next = document.getElementById('testiNext');
+  if (!track || !prev || !next) return;
+  function scrollAmount() {
+    const card = track.querySelector('.testi-card');
+    return card ? card.getBoundingClientRect().width + 16 : 300;
+  }
+  prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior:'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior:'smooth' }));
+})();
+/* VIDEO TESTIMONIAL ROW — play on tap, pause others, arrow sliding, fullscreen on play */
+(function() {
+  const track = document.getElementById('vtestiTrack');
+  const prev = document.getElementById('vtestiPrev');
+  const next = document.getElementById('vtestiNext');
+  if (!track) return;
+
+  function requestFS(el) {
+    const fn = el.requestFullscreen || el.webkitRequestFullscreen ||
+               el.webkitEnterFullscreen /* iOS Safari native video fullscreen */ ||
+               el.mozRequestFullScreen || el.msRequestFullscreen;
+    if (fn) fn.call(el);
+  }
+  function exitFS() {
+    const fn = document.exitFullscreen || document.webkitExitFullscreen ||
+               document.mozCancelFullScreen || document.msExitFullscreen;
+    if (fn && (document.fullscreenElement || document.webkitFullscreenElement)) fn.call(document);
+  }
+
+  track.querySelectorAll('.vtesti-card').forEach(card => {
+    const video = card.querySelector('video');
+
+    card.addEventListener('click', () => {
+      const isPlaying = card.classList.contains('playing');
+      track.querySelectorAll('.vtesti-card').forEach(c => {
+        c.classList.remove('playing');
+        const v = c.querySelector('video');
+        v.pause(); v.currentTime = 0; v.removeAttribute('controls');
+      });
+      if (!isPlaying) {
+        card.classList.add('playing');
+        video.setAttribute('controls', '');
+        video.play().then(() => requestFS(video)).catch(() => {
+          video.muted = true;
+          video.play().then(() => requestFS(video)).catch(() => {});
+        });
+      }
+    });
+
+    video.addEventListener('ended', () => {
+      card.classList.remove('playing');
+      video.removeAttribute('controls');
+      exitFS();
+    });
+
+    // reset card state when the visitor exits fullscreen manually
+    ['fullscreenchange', 'webkitfullscreenchange'].forEach(evt => {
+      document.addEventListener(evt, () => {
+        const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+        if (fsEl !== video && card.classList.contains('playing') && video.paused) {
+          card.classList.remove('playing');
+          video.removeAttribute('controls');
+        }
+      });
+    });
+  });
+
+  function scrollAmt() {
+    const c = track.querySelector('.vtesti-card');
+    return c ? c.getBoundingClientRect().width + 14 : 200;
+  }
+  if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmt(), behavior:'smooth' }));
+  if (next) next.addEventListener('click', () => track.scrollBy({ left: scrollAmt(), behavior:'smooth' }));
+})();
+/* SCROLL PROGRESS BAR + SUBTLE HERO PARALLAX */
+(function() {
+  const bar = document.getElementById('scrollProgress');
+  const heroBg = document.getElementById('heroBg');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ticking = false;
+  function update() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+    if (heroBg && !reduceMotion) {
+      const shift = Math.min(scrollTop * 0.18, 140);
+      heroBg.style.transform = `translateY(${shift}px)`;
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive:true });
+  update();
+})();
+
+/* EVENT DETAILS (Date / Time / Duration / Language) — pulled from the
+   backend; falls back to sensible defaults if the request fails so the
+   four cards below the hero video never sit empty or stuck on "Loading…" */
+fetch('https://vsl-1-a4e0.onrender.com/api/content')
+  .then(res => res.json())
+  .then(data => {
+    const setIfPresent = (id, val) => { const el = document.getElementById(id); if (el && val != null && val !== '') el.textContent = val; };
+    setIfPresent('event-date', data.date);
+    setIfPresent('event-time', data.time);
+    setIfPresent('event-duration', data.duration);
+    setIfPresent('event-language', data.language);
+  })
+  .catch(err => {
+    console.error('Could not load event details, showing defaults:', err);
+    const setIfPresent = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    setIfPresent('event-date', 'Announced Soon');
+    setIfPresent('event-time', 'Announced Soon');
+    setIfPresent('event-duration', '28 Days');
+    setIfPresent('event-language', 'Hindi');
+  });
+
+</script>
+</body>
+</html>
